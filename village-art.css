@@ -1,0 +1,38 @@
+/* Quiet, original rural line art lives only in existing screen gutters. */
+.village-edge-art { pointer-events: none; user-select: none; }
+@media screen {
+  .public-workspace { position: relative; isolation: isolate; }
+  .public-workspace > #mainContent, .public-workspace > #sharedFooter { position: relative; z-index: 1; }
+  .village-edge-art { position: absolute; z-index: 0; inset: 8px 0 0; overflow: hidden; }
+  .village-edge-art::before, .village-edge-art::after {
+    content: ""; position: absolute; top: 10px; bottom: 0; width: 24px;
+    background: url("assets/village-margin.svg") center top / 24px auto repeat-y;
+    opacity: .76; pointer-events: none;
+  }
+  .village-edge-art::before { display: none; content: none; }
+  .village-edge-art::after { right: 0; transform: scaleX(-1); }
+  .public-footer { position: relative; }
+  .public-footer::before {
+    content: ""; position: absolute; top: -23px; right: 24px; width: 180px; height: 21px;
+    background: url("assets/village-border.svg") right bottom / contain no-repeat;
+    opacity: .72; pointer-events: none; user-select: none;
+  }
+  .public-contact-home { padding-bottom: 100px; }
+  .public-workspace:has(.public-contact-home) .public-footer::before {
+    top: -96px; width: min(500px, 72%); height: 86px; opacity: .86;
+  }
+  .it-page { position: relative; isolation: isolate; }
+  .it-page > .village-edge-art { position: fixed; inset: 90px 8px 40px; }
+  .it-page > .it-header, .it-page > #itMain, .it-page > .it-footer { position: relative; z-index: 1; }
+  @media (max-width: 1000px) { .it-page > .village-edge-art { display: none; } }
+  @media (max-width: 800px) { .public-workspace > .village-edge-art { display: none; } }
+  @media (max-width: 580px) {
+    .public-footer::before { top: -14px; right: 16px; width: 105px; height: 12px; opacity: .62; }
+    .public-workspace:has(.public-contact-home) .public-footer::before { top: -61px; width: min(320px, 86%); height: 54px; opacity: .8; }
+    .public-contact-home { padding-bottom: 60px; }
+  }
+}
+@media print, (forced-colors: active) {
+  .village-edge-art, .public-footer::before { display: none !important; content: none !important; }
+  .public-contact-home { padding-bottom: 0 !important; }
+}

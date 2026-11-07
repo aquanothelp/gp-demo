@@ -1,0 +1,41 @@
+/* Request labels are demo product choices, separate from the dated legal rules. */
+.workflow-summary, .workflow-response, .workflow-update-form { min-width: 0; margin: 22px 0; padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: #f8f9fb; }
+.workflow-summary > strong { display: block; margin: 10px 0 5px; color: var(--ink); font-size: 15px; }
+.workflow-summary p, .workflow-response p { margin: 6px 0; font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+.workflow-path { color: #4d6084; font-size: 12px !important; font-weight: 650; }
+.workflow-clock-note { margin-top: 14px !important; padding-top: 12px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px !important; }
+.workflow-records { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 20px; margin: 16px 0; }
+.workflow-records > div { min-width: 0; }
+.workflow-records dt { color: var(--muted); font-size: 12px; line-height: 1.6; }
+.workflow-records dd { margin: 3px 0 0; color: var(--ink); font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; white-space: pre-wrap; }
+.workflow-warning { padding: 12px; border-radius: 8px; background: #fff7e8; color: #80571d; }
+.workflow-appeal { margin-top: 16px; padding: 14px; border: 1px solid #d0dcec; border-radius: 9px; background: #f1f6fc; color: #2e4b6a; }
+.workflow-appeal a { color: #244f80; text-decoration: underline; font-size: 13px; overflow-wrap: anywhere; }
+.workflow-update-form { background: #fff; border-color: var(--line); }
+.workflow-update-form .subheading { margin-top: 0; }
+.workflow-transition-fields .form-field { margin-bottom: 18px; }
+.workflow-transition-fields input[readonly], .workflow-transition-fields textarea[readonly] { background: #f4f6f9; color: #566173; cursor: default; }
+.workflow-transition-fields textarea[readonly] { min-height: 86px; }
+.workflow-check { align-items: flex-start; margin: 12px 0 18px; padding: 12px; border-radius: 8px; background: #f4f6fa; font-size: 14px; }
+.workflow-check input { flex: 0 0 20px; width: 20px; height: 20px; margin-top: 3px; }
+.workflow-response h3 { margin-top: 0; font-size: 18px; }
+.workflow-response .form-field { margin-top: 16px; }
+.status-pill.ready { color: #315a92; background: #edf3fc; }
+.status-pill.rejected { color: #8d352f; background: #f9e9e4; }
+.status-pill.resolved { color: var(--green); background: var(--green-soft); }
+.status-pill.referred { color: #76572b; background: #faf0dc; }
+.timeline-dot.ready { color: #315a92; background: #edf3fc; }
+.timeline-dot.rejected { color: #8d352f; background: #f9e9e4; }
+.timeline-dot.resolved { color: var(--green); background: var(--green-soft); }
+.timeline-dot.referred { color: #76572b; background: #faf0dc; }
+.stat-icon.waiting { color: var(--orange); background: var(--orange-soft); }
+.stat-icon.closed { color: var(--green); background: var(--green-soft); }
+.queue-table .status-pill { max-width: 260px; white-space: normal; line-height: 1.55; }
+@media (max-width: 600px) {
+  .workflow-summary, .workflow-response, .workflow-update-form { padding: 14px; }
+  .workflow-records { grid-template-columns: minmax(0, 1fr); gap: 11px; }
+  .workflow-transition-fields input, .workflow-transition-fields select, .workflow-transition-fields textarea, .workflow-response select, .workflow-response textarea { font-size: 16px; }
+  .workflow-update-form > .button, .workflow-response > .button { width: 100%; min-height: 44px; }
+  .workflow-check { padding: 10px; }
+}
+

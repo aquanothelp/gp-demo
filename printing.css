@@ -1,0 +1,171 @@
+/* Source-mapped fictional previews. Screen styles also work inside #appDialog. */
+@media screen {
+  .print-preview-dialog .print-preview { border-color: #dfe3eb; background: #f0f2f6; color: #252a35; }
+  .print-preview-dialog .print-preview h1, .print-preview-dialog .print-preview h2, .print-preview .print-field dd, .print-preview .print-table th { color: #252a35; }
+  .print-preview .print-office-heading small, .print-preview .print-field dt, .print-preview .print-source-note { color: #626875; }
+  .print-preview .print-table th { background: #f4f5f8; }
+}
+.print-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 14px 0; min-width: 0; }
+.print-actions .button { max-width: 100%; white-space: normal; text-align: left; }
+.page-heading:has(.print-actions) { flex-wrap: wrap; }
+.page-heading .print-actions { margin: 0; }
+.modal-footer:has([data-print-kind]) { flex-wrap: wrap; }
+.print-preview-dialog { width: min(1180px, calc(100vw - 32px)); max-width: calc(100vw - 32px); max-height: 90dvh; overflow: auto; }
+.print-preview-dialog .modal-body { min-width: 0; }
+.print-preview-dialog .modal-footer { flex-wrap: wrap; }
+.print-preview-body { min-width: 0; padding: 18px 24px; }
+.print-preview {
+  max-width: 100%;
+  max-height: 62dvh;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid #d9e1d7;
+  border-radius: 10px;
+  background: #edf1eb;
+  color: #23332d;
+  font-family: "Nirmala UI", "Segoe UI", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  text-align: left;
+  overflow-wrap: anywhere;
+  scrollbar-gutter: stable;
+}
+.print-sheet { width: 100%; min-width: 0; margin: 0; padding: 26px; background: #fff; box-sizing: border-box; }
+.print-page-frame { width: 100%; border: 0; border-collapse: collapse; table-layout: fixed; }
+.print-page-frame > tbody > tr > td { padding: 0; border: 0; vertical-align: top; }
+.print-page-head, .print-page-foot { display: none; }
+.print-preview h1 { margin: 18px 0 8px; color: #183f35; font-size: 22px; font-weight: 700; line-height: 1.5; letter-spacing: 0; }
+.print-preview h2 { margin: 0 0 12px; color: #233c31; font-size: 16px; font-weight: 700; line-height: 1.6; }
+.print-preview p { margin: 0 0 12px; }
+.print-demo-warning { margin: 0 0 20px !important; padding: 10px 12px; border: 2px solid #9b472b; color: #853b25; background: #fff7ee; font-size: 12px; font-weight: 800; line-height: 1.6; text-align: center; letter-spacing: .015em; }
+.print-office-heading { display: grid; gap: 3px; padding-bottom: 15px; border-bottom: 1px solid #a7b5a9; text-align: center; }
+.print-office-heading strong { font-size: 20px; line-height: 1.6; }
+.print-office-heading span { font-size: 13px; }
+.print-office-heading small { color: #52665b; font-size: 12px; }
+.print-document-meta, .print-form-caption, .print-small { color: #4c5c53; font-size: 12px; }
+.print-document-meta { margin-bottom: 22px !important; }
+.print-form-caption { padding-bottom: 10px; font-weight: 650; }
+.print-notice { padding: 12px 14px; border-left: 3px solid #b66a45; background: #fcf6ef; color: #664732; font-size: 13px; line-height: 1.8; }
+.print-gap { min-height: 100px; display: flex; align-items: center; }
+.print-section { margin-top: 24px; }
+.print-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; margin: 14px 0; }
+.print-field { min-width: 0; padding: 9px 0 12px; border-bottom: 1px solid #d9dfd7; }
+.print-field dt { margin: 0 0 4px; color: #526358; font-size: 12px; font-weight: 650; line-height: 1.6; }
+.print-field dd { min-height: 25px; margin: 0; color: #203c2c; font-size: 14px; line-height: 1.8; white-space: pre-wrap; overflow-wrap: anywhere; }
+.print-blank { display: inline-block; max-width: 100%; color: #7b847c; font-family: "Segoe UI", system-ui, sans-serif; letter-spacing: .02em; overflow: hidden; vertical-align: bottom; }
+.print-preserve { white-space: pre-wrap; overflow-wrap: anywhere; }
+.print-source-note { margin-top: 26px; padding-top: 15px; border-top: 1px solid #acb7a9; color: #4c5f50; font-size: 11px; line-height: 1.8; }
+.print-source-note strong { display: block; margin-bottom: 6px; font-size: 12px; }
+.print-source-note p { margin-bottom: 8px; }
+.print-table-wrap { max-width: 100%; overflow-x: auto; }
+.print-table { width: 100%; margin: 12px 0; border-collapse: collapse; border: 1px solid #89998b; color: #23332d; font-size: 12px; line-height: 1.8; table-layout: fixed; }
+.print-table th, .print-table td { padding: 8px; border: 1px solid #a1afa0; vertical-align: top; text-align: left; white-space: normal; overflow-wrap: anywhere; }
+.print-table th { color: #1c3d2d; background: #eef3eb; font-size: 11px; font-weight: 700; }
+.print-register-table { min-width: 1000px; }
+.print-register-table th:first-child { width: 13%; }
+.print-register-table th:nth-child(2) { width: 14%; }
+.print-register-table th:nth-child(4), .print-register-table th:nth-child(5) { width: 9%; }
+.print-register-table th:nth-child(6), .print-register-table th:nth-child(7) { width: 11%; }
+.print-register-table td { min-height: 35px; }
+.print-register-table .print-blank { font-size: 9px; }
+.print-assessment-fields th:first-child { width: 10%; }
+.print-assessment-fields th:nth-child(2) { width: 55%; }
+.print-history { margin: 0; padding: 0; list-style: none; }
+.print-history-entry { margin: 0 0 14px; padding: 12px 14px; border: 1px solid #d6dfd1; border-left: 3px solid #71947b; border-radius: 4px; }
+.print-history-heading { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 15px; margin-bottom: 6px; }
+.print-history-heading strong { font-size: 13px; }
+.print-history-heading span { color: #58695b; font-size: 11px; }
+.print-history-entry p { margin: 0; font-size: 13px; line-height: 1.85; }
+.print-workflow-record { margin-top: 24px; padding-top: 18px; border-top: 1px solid #b8c7b4; }
+.print-photo-row { display: flex; gap: 20px; justify-content: flex-end; margin: 18px 0; }
+.print-photo-row > div { display: flex; align-items: center; justify-content: center; width: 100px; min-height: 120px; padding: 10px; border: 1px dashed #8e9d91; color: #637260; font-size: 11px; text-align: center; }
+.print-service-list { margin: 10px 0 20px; padding-left: 22px; }
+.print-service-list li { margin-bottom: 7px; }
+.print-running-warning, .print-running-footer { display: none; }
+#printRoot { display: none; }
+@media (max-width: 560px) {
+  .print-preview-body { padding: 12px; }
+  .print-preview { max-height: 59dvh; font-size: 14px; }
+  .print-sheet { padding: 16px; }
+  .print-preview h1 { font-size: 20px; }
+  .print-office-heading strong { font-size: 18px; }
+  .print-fields { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .print-preview .print-document-meta { font-size: 11px; }
+  .print-photo-row { justify-content: flex-start; gap: 12px; }
+  .print-photo-row > div { width: 88px; min-height: 104px; }
+  .print-source-note { font-size: 11px; }
+}
+
+/* Named pages are used only by the prepared document. Browser print options can
+   override paper size. Ordinary Ctrl+P retains the application's normal styles. */
+@page gpPortrait { size: A4 portrait; margin: 17mm 13mm 21mm; }
+@page gpLandscape { size: A4 landscape; margin: 17mm 12mm 21mm; }
+@page gpWide { size: A3 landscape; margin: 17mm 13mm 21mm; }
+@media print {
+  body.printing-document { margin: 0 !important; padding: 0 !important; width: auto !important; min-width: 0 !important; height: auto !important; overflow: visible !important; background: #fff !important; color: #000 !important; }
+  body.printing-document > :not(#printRoot) { display: none !important; }
+  body.printing-document dialog, body.printing-document dialog::backdrop { display: none !important; background: transparent !important; }
+  body.printing-document #printRoot { display: block !important; position: static !important; width: auto !important; max-width: none !important; height: auto !important; max-height: none !important; margin: 0 !important; padding: 0 !important; overflow: visible !important; border: 0 !important; }
+  body.printing-document #printRoot .print-preview { display: block !important; width: auto !important; min-width: 0 !important; max-width: none !important; height: auto !important; max-height: none !important; margin: 0 !important; padding: 0 !important; overflow: visible !important; border: 0 !important; border-radius: 0 !important; background: #fff !important; box-shadow: none !important; color: #000 !important; font-size: 10pt; line-height: 1.65; scrollbar-gutter: auto; }
+  body.printing-document #printRoot .print-sheet { page: gpPortrait; display: block; width: auto; min-width: 0; max-width: none; margin: 0; padding: 0; border: 0; box-shadow: none; background: #fff; }
+  body.printing-document #printRoot [data-paper="landscape"] .print-sheet { page: gpLandscape; }
+  body.printing-document #printRoot [data-paper="wide"] .print-sheet { page: gpWide; }
+  body.printing-document #printRoot .print-sheet::before { content: "DEMO / NOT VALID"; position: fixed; z-index: 0; inset: 38% 5% auto; color: #ddd; opacity: .38; font: 700 39pt "Segoe UI", system-ui, sans-serif; text-align: center; transform: rotate(-25deg); pointer-events: none; }
+  body.printing-document #printRoot .print-document-header,
+  body.printing-document #printRoot .print-document-body,
+  body.printing-document #printRoot .print-source-note { position: relative; z-index: 1; }
+  /* Real table header/footer groups reserve their own space on every fragment.
+     Negative fixed offsets do not reliably follow named-page fragmentation. */
+  body.printing-document #printRoot .print-page-frame { display: table; width: 100%; margin: 0; border: 0; border-collapse: collapse; table-layout: fixed; }
+  body.printing-document #printRoot .print-page-head { display: table-header-group; break-inside: avoid; }
+  body.printing-document #printRoot .print-page-foot { display: table-footer-group; break-inside: avoid; }
+  body.printing-document #printRoot .print-page-frame > tbody { display: table-row-group; }
+  body.printing-document #printRoot .print-page-frame > tbody > tr { display: table-row; break-inside: auto; }
+  body.printing-document #printRoot .print-page-frame > thead > tr > td,
+  body.printing-document #printRoot .print-page-frame > tfoot > tr > td,
+  body.printing-document #printRoot .print-page-frame > tbody > tr > td { display: table-cell; padding: 0; border: 0; vertical-align: top; break-inside: auto; }
+  body.printing-document #printRoot .print-page-head > tr > td { padding-bottom: 3mm; }
+  body.printing-document #printRoot .print-page-foot > tr > td { padding-top: 3mm; }
+  body.printing-document #printRoot .print-running-warning { display: block; position: static; margin: 0; padding: 2mm 0; border-bottom: .35mm solid #555; color: #000; background: #fff; font-size: 8pt; font-weight: 800; line-height: 1.5; text-align: center; overflow-wrap: anywhere; }
+  body.printing-document #printRoot .print-running-footer { display: block; position: static; margin: 0; padding-top: 2mm; border-top: .2mm solid #888; color: #222; background: #fff; font-size: 7pt; line-height: 1.55; overflow-wrap: anywhere; }
+  body.printing-document #printRoot .print-demo-warning { display: none; }
+  body.printing-document #printRoot h1 { margin: 5mm 0 3mm; color: #000; font-size: 16pt; }
+  body.printing-document #printRoot h2 { margin: 0 0 3mm; color: #000; font-size: 11pt; break-after: avoid; }
+  body.printing-document #printRoot p { orphans: 3; widows: 3; }
+  body.printing-document #printRoot .print-office-heading { break-inside: avoid; }
+  body.printing-document #printRoot .print-office-heading strong { font-size: 14pt; }
+  body.printing-document #printRoot .print-office-heading span,
+  body.printing-document #printRoot .print-office-heading small { color: #222; font-size: 9pt; }
+  body.printing-document #printRoot .print-notice { padding: 3mm; border: .2mm solid #aaa; border-left: .8mm solid #555; background: #fff; color: #111; font-size: 9pt; break-inside: avoid; }
+  body.printing-document #printRoot .print-document-meta,
+  body.printing-document #printRoot .print-form-caption,
+  body.printing-document #printRoot .print-small { color: #222; font-size: 8pt; }
+  body.printing-document #printRoot .print-document-meta { margin-bottom: 3mm !important; }
+  body.printing-document #printRoot .print-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 8mm; margin: 3mm 0; }
+  body.printing-document #printRoot .print-field { padding: 2mm 0 3mm; break-inside: avoid; }
+  body.printing-document #printRoot .print-field dt { color: #333; font-size: 8pt; }
+  body.printing-document #printRoot .print-field dd { min-height: 5mm; color: #000; font-size: 10pt; }
+  body.printing-document #printRoot .print-blank { color: #444; }
+  body.printing-document #printRoot .print-table-wrap { width: auto; max-width: none; overflow: visible; }
+  body.printing-document #printRoot .print-table { width: 100%; min-width: 0; margin: 3mm 0; table-layout: fixed; font-size: 8pt; }
+  body.printing-document #printRoot .print-table th,
+  body.printing-document #printRoot .print-table td { padding: 2mm; border-color: #666; color: #000; background: #fff; font-size: 8pt; }
+  body.printing-document #printRoot .print-table thead { display: table-header-group; }
+  body.printing-document #printRoot .print-table tfoot { display: table-footer-group; }
+  body.printing-document #printRoot .print-table tr { break-inside: avoid; }
+  body.printing-document #printRoot .print-table .print-blank { max-width: 100%; font-size: 6pt; }
+  body.printing-document #printRoot .print-section { margin-top: 5mm; }
+  body.printing-document #printRoot .print-history-entry { border-color: #999; border-radius: 0; margin-bottom: 3mm; padding: 3mm; break-inside: avoid; }
+  body.printing-document #printRoot .print-history-heading { break-after: avoid; }
+  body.printing-document #printRoot .print-history-heading strong { font-size: 10pt; }
+  body.printing-document #printRoot .print-history-heading span { color: #333; font-size: 8pt; }
+  body.printing-document #printRoot .print-history-entry p { font-size: 9pt; }
+  body.printing-document #printRoot .print-source-note { color: #222; margin-top: 4mm; padding-top: 2mm; font-size: 8pt; break-inside: avoid; }
+  body.printing-document #printRoot .print-source-note strong { font-size: 9pt; }
+  body.printing-document #printRoot .print-source-note > p:first-of-type { display: none; }
+  /* The per-page footer already marks unsigned/unapproved DEMO status. Keep
+     the source-specific caveat here without repeating generic boilerplate. */
+  body.printing-document #printRoot .print-source-note > p:last-of-type { display: none; }
+  body.printing-document #printRoot .print-photo-row { break-inside: avoid; }
+  body.printing-document #printRoot .print-photo-row > div { width: 24mm; min-height: 29mm; color: #333; font-size: 8pt; }
+}

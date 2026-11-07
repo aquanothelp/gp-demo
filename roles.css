@@ -1,0 +1,248 @@
+/* Distinct demo roles share GP identity and the protected workspace boundary. */
+/* Use one font family/line height for both languages; preferences live in Profile. */
+.profile-button { display: flex; align-items: center; gap: 10px; min-height: 48px; width: 210px; padding: 7px 10px; border: 1px solid transparent; border-radius: 9px; background: #fff; text-align: left; line-height: 1.5; }
+.profile-button:hover { background: #f6f7fa; }
+.profile-button .session-identity { flex: 1; }
+.profile-button .user-avatar { display: grid; flex: 0 0 32px; }
+.profile-button .user-label { display: block; font-size: 12px; line-height: 1.5; }
+.profile-button > .icon { width: 15px; height: 15px; color: var(--muted); }
+.profile-caption { display: block; color: var(--ink); font-size: 12px; font-weight: 650; line-height: 1.5; }
+.profile-summary { margin-bottom: 22px; color: var(--muted); overflow-wrap: anywhere; }
+.profile-summary strong { display: block; color: var(--ink); }
+.demo-role-switch { display: flex; align-items: center; flex-wrap: wrap; gap: 7px 10px; min-width: 0; }
+.role-switch-label { color: var(--muted); font-size: 11px; font-weight: 650; line-height: 1.35; }
+.demo-session-actions { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 5px 13px; }
+.demo-session-actions > button { min-height: 44px; }
+.session-identity { display: grid; min-width: 0; max-width: 170px; gap: 2px; }
+.session-identity .user-label { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.admin-sidebar-note { margin: 24px 0 0; padding: 13px 14px; border: 1px solid var(--line); border-radius: 10px; background: #f6f7fa; color: var(--muted); font-size: 12px; line-height: 1.7; }
+/* Keep the absolutely positioned screen-reader table heading inside its scrollport. */
+#portalRoot[data-role="admin"] .table-wrap { position: relative; }
+.admin-workspace-panel, .admin-services-panel { margin-bottom: 22px; }
+.admin-profile-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 20px; margin: 0; }
+.admin-profile-grid > div { min-width: 0; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.admin-profile-grid dt { margin-bottom: 5px; color: var(--muted); font-size: 12px; }
+.admin-profile-grid dd { margin: 0; color: var(--ink); font-size: 15px; font-weight: 650; overflow-wrap: anywhere; }
+.admin-authority-note { display: flex; align-items: flex-start; gap: 10px; margin-top: 16px; padding: 14px; border: 1px solid #e1e5ee; border-radius: 11px; background: #f7f8fb; color: #4d5b73; }
+.admin-authority-note > .icon { width: 23px; height: 23px; margin-top: 3px; }
+.admin-authority-note strong { display: block; margin-bottom: 5px; font-size: 14px; }
+.admin-authority-note p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.admin-service-list { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+.admin-service-chip { display: inline-flex; align-items: center; gap: 7px; min-width: 0; max-width: 100%; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; background: #f7f8fa; color: #516079; font-size: 13px; overflow-wrap: anywhere; }
+.admin-service-chip > .icon { width: 17px; height: 17px; }
+.admin-workspace-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.admin-role-comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 18px 0; }
+.admin-role-comparison > div { min-width: 0; padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: #fafbfc; }
+.admin-role-comparison h3 { margin: 15px 0 9px; font-size: 20px; }
+.admin-role-comparison p { margin: 0; color: var(--muted); font-size: 14px; }
+.admin-permissions-panel > .info-note { display: block; margin-bottom: 23px; }
+@media (max-width: 1100px) {
+  .demo-role-switch { gap: 4px 8px; }
+  .demo-session-actions { gap: 2px 10px; }
+  .session-identity { max-width: 140px; }
+}
+@media (max-width: 760px) {
+  .demo-role-switch { flex: 1 1 auto; }
+  .demo-session-actions { justify-content: flex-start; }
+  .admin-workspace-panel .section-header { align-items: flex-start; flex-wrap: wrap; }
+}
+@media (max-width: 540px) {
+  .profile-button { width: 126px; min-height: 48px; padding: 6px 8px; gap: 6px; }
+  .profile-button .user-label { display: none; }
+  .profile-button > .icon { display: none; }
+  .profile-caption { font-size: 12px; }
+  .role-switch-label { font-size: 11px; }
+  .demo-role-switch { gap: 4px 8px; }
+  .demo-session-actions { width: 100%; justify-content: space-between; }
+  .demo-session-actions > button { font-size: 12px; }
+  .session-identity { max-width: 110px; }
+  .admin-profile-grid, .admin-role-comparison { grid-template-columns: minmax(0, 1fr); }
+  .admin-authority-note { padding: 13px; }
+  .admin-workspace-actions > button { width: 100%; }
+  .admin-service-chip { font-size: 12px; }
+}
+
+.workspace-role-badge { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 0; max-width: 100%; padding: 7px 10px; border: 1px solid #c8d7ee; border-radius: 7px; background: #edf3fc; color: #2457a7; font-size: 13px; font-weight: 700; line-height: 1.4; }
+.workspace-role-badge > .icon { width: 16px; height: 16px; flex: 0 0 16px; }
+#portalRoot[data-role="admin"] .workspace-role-badge { border-color: #e9c5ae; background: #fff1e6; color: #b34c1b; }
+@media (max-width: 540px) {
+  .topbar-actions { flex-direction: column; align-items: stretch; gap: 4px; flex: 0 0 126px; }
+  .workspace-role-badge { padding: 5px 7px; font-size: 12px; overflow-wrap: anywhere; }
+}
+
+/* The persistent view control replaces the removed floating demo tools. */
+#workspaceHeader { min-height: 76px; padding-block: 10px; }
+#workspaceHeader .topbar-actions { flex: 0 0 auto; flex-direction: row; align-items: center; gap: 8px; }
+#workspaceHeader .workspace-role-badge { min-height: 44px; cursor: pointer; }
+.workspace-role-badge .role-badge-chevron { width: 12px; height: 12px; flex-basis: 12px; transform: rotate(90deg); }
+.workspace-role-badge[aria-expanded="true"] .role-badge-chevron { transform: rotate(-90deg); }
+.role-view-popover { position: fixed; inset: auto; width: 280px; max-width: calc(100vw - 24px); max-height: calc(100dvh - 24px); margin: 0; padding: 16px; overflow: auto; border: 1px solid var(--line); border-radius: 12px; background: #fff; color: var(--ink); box-shadow: 0 12px 36px rgb(24 24 27 / 16%); }
+.role-view-popover h2 { margin: 0 0 7px; font-size: 16px; line-height: 1.5; }
+.role-view-popover p { margin: 0 0 14px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.role-view-popover .view-switch { display: grid; gap: 5px; padding: 4px; }
+.role-view-popover .view-switch button { width: 100%; min-height: 44px; text-align: left; font-size: 14px; }
+.profile-account-section { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); }
+.profile-account-section h3 { margin: 0 0 13px; font-size: 16px; }
+.profile-account-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.profile-account-actions .button { min-height: 44px; }
+.citizen-village-section { margin-bottom: 30px; }
+.citizen-village-grid { display: grid; grid-template-columns: minmax(280px, .9fr) minmax(0, 1.5fr); align-items: start; gap: 18px; }
+.citizen-village-panel, .citizen-leadership-panel { min-width: 0; }
+.citizen-village-panel h3, .citizen-leadership-panel > h3 { margin: 0 0 15px; color: var(--ink); font-size: 18px; line-height: 1.6; }
+.citizen-village-about { margin: 0 0 8px; color: var(--muted); font-size: 14px; line-height: 1.8; }
+.citizen-office-address { margin-top: 19px; font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
+.citizen-office-address > strong { color: var(--ink); }
+.citizen-office-address p { margin: 6px 0; }
+.citizen-office-address a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: var(--accent); }
+.citizen-leadership-panel > .text-button { margin-top: 12px; min-height: 44px; }
+.workspace-brand .brand-mark:has(img) { width: 40px; height: 40px; background: transparent; }
+.workspace-brand .brand-mark img { display: block; width: 40px; height: 40px; object-fit: contain; }
+@media (max-width: 1100px) {
+  .citizen-village-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 760px) {
+  #workspaceHeader { min-height: 76px; padding: 8px 12px; gap: 8px; }
+  #workspaceHeader .profile-button { flex: 0 0 44px; width: 44px; height: 44px; min-height: 44px; padding: 5px; }
+  #workspaceHeader .profile-button .session-identity, #workspaceHeader .profile-button > .icon { display: none; }
+  #workspaceHeader .topbar-actions { gap: 6px; }
+  #workspaceHeader .workspace-role-badge { max-width: 136px; padding: 6px 7px; gap: 4px; font-size: 12px; }
+  #workspaceHeader .place-selector { flex: 1 1 auto; min-width: 0; }
+  #workspaceHeader .place-selector select { width: 100%; max-width: 100%; font-size: 14px; }
+  .citizen-village-section > .section-header { align-items: flex-start; flex-wrap: wrap; }
+  .profile-account-actions { display: grid; grid-template-columns: minmax(0, 1fr); }
+}
+@media print {
+  .role-view-popover { display: none !important; }
+}
+
+/* One persistent GP site shell for public information, Login and signed-in tools. */
+#gpShell { padding-top: 0; }
+#gpShell #sidebar { height: max(0px, calc(var(--public-viewport-height, 100dvh) - var(--public-header-height))); }
+#gpShell #mobileShade { height: max(0px, calc(var(--public-viewport-height, 100dvh) - var(--public-header-height))); bottom: auto; }
+#gpShell .gp-shell-brand { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 48px; min-width: 0; height: 48px; min-height: 44px; margin: 0; padding: 0; border: 0; background: transparent; }
+#gpShell .gp-shell-brand img { width: 48px; height: 48px; object-fit: contain; }
+#gpShell #workspaceHeader { position: sticky; inset: 0 auto auto; width: 100%; min-height: 76px; gap: 16px; padding: 10px 24px; }
+#gpShell .gp-account-actions { display: flex; flex: 0 0 auto; align-items: center; justify-content: flex-end; gap: 8px; margin-left: 0; }
+#gpShell .profile-button { width: 150px; min-height: 44px; padding: 5px 8px; }
+#gpShell .profile-button .session-identity { max-width: 96px; }
+#gpShell .profile-button .user-avatar { width: 30px; height: 30px; flex-basis: 30px; }
+#gpShell .gp-session-heading { margin-top: 24px; }
+#gpShell .public-nav + .public-nav { margin-top: 14px; }
+#gpShell .public-side-bottom { display: grid; gap: 4px; }
+#gpShell .public-side-bottom button { display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%; min-height: 44px; padding: 8px; text-align: left; }
+#gpShell .public-side-bottom .icon { flex-shrink: 0; }
+#gpShell .main-content { min-width: 0; }
+#gpShell .gp-auth-content { padding-block: 22px 32px; }
+@media (min-width: 801px) {
+  #gpShell.sidebar-collapsed .public-side-caption, #gpShell.sidebar-collapsed .gp-session-heading, #gpShell.sidebar-collapsed .admin-sidebar-note { display: none; }
+  #gpShell.sidebar-collapsed .public-side-bottom button { justify-content: center; width: 46px; min-height: 46px; padding: 10px; }
+  #gpShell.sidebar-collapsed .public-side-bottom button > span { display: none; }
+}
+@media (max-width: 1200px) {
+  #gpShell #workspaceHeader .public-toplinks { display: none; }
+  #gpShell .profile-button { width: 44px; height: 44px; }
+  #gpShell .profile-button .session-identity, #gpShell .profile-button > .icon { display: none; }
+}
+
+@media (max-width: 800px) {
+  #gpShell #workspaceHeader { display: grid; grid-template-columns: 44px 40px minmax(0, 1fr) auto; gap: 6px 9px; min-height: 72px; padding: 8px 12px; }
+  #gpShell .gp-shell-brand, #gpShell .gp-shell-brand img { width: 40px; height: 40px; }
+  #gpShell .public-gp-label { grid-column: 3; margin: 0; }
+  #gpShell .public-gp-label strong { font-size: 22px; line-height: 1.25; }
+  #gpShell .public-gp-label small { font-size: 11px; }
+  #gpShell .public-national-marks { grid-column: 4; grid-row: 1; gap: 8px; }
+  #gpShell .public-national-marks .india-emblem { width: 23px; height: 36px; }
+  #gpShell #workspaceHeader .gp-account-actions { grid-column: 1 / -1; grid-row: 2; justify-content: flex-end; gap: 8px; width: 100%; min-height: 44px; padding-top: 2px; border-top: 1px solid var(--line); }
+  #gpShell #workspaceHeader .profile-button { width: 44px; height: 44px; }
+  #gpShell #workspaceHeader .workspace-role-badge { max-width: none; min-height: 44px; padding: 7px 10px; font-size: 13px; }
+  #gpShell .gp-auth-content { padding: 18px 16px 28px; }
+  #gpShell input, #gpShell select, #gpShell textarea, #publicDialogs input, #publicDialogs select, #publicDialogs textarea { font-size: 16px; }
+}
+@media (max-width: 420px) {
+  #gpShell #workspaceHeader { gap: 6px; padding-inline: 10px; }
+  #gpShell .public-gp-label strong { font-size: 20px; }
+}
+
+/* Ordinary users choose a GP and sign in; portal IT provisions GPs separately. */
+#gpShell .gp-auth-content { padding: 0; }
+.gp-login-page { width: min(720px, 100%); margin: 0 auto; }
+.gp-login-page > .breadcrumb { margin-bottom: 6px; }
+.gp-login-page > .breadcrumb .text-button { min-height: 44px; }
+.gp-login-card { min-width: 0; padding: 20px 24px; border: 1px solid var(--line); border-radius: 13px; background: #fff; box-shadow: 0 4px 24px rgb(23 36 59 / 4%); }
+.gp-login-heading { margin-bottom: 12px; }
+.gp-login-heading .public-kicker { display: none; }
+.gp-login-heading h1 { margin: 0 0 5px; color: var(--public-ink, var(--ink)); font-size: 26px; font-weight: 700; line-height: 1.4; }
+.gp-login-heading > p:last-child { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
+.gp-login-location { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 12px 16px; min-width: 0; margin: 0; padding: 0; border: 0; }
+.gp-login-location > legend { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; white-space: nowrap; clip-path: inset(50%); }
+.gp-login-location > .field-grid { grid-column: 1 / -1; align-items: start; gap: 16px; margin-top: 0; }
+.gp-login-card .form-field { display: flex; flex-direction: column; align-self: start; align-items: stretch; gap: 6px; min-width: 0; margin: 0; }
+.gp-login-card .form-field + .form-field { margin-top: 0; }
+.gp-login-card label { color: var(--ink); font-size: 13px; font-weight: 600; }
+.gp-login-card input, .gp-login-card select { flex: 0 0 44px; width: 100%; max-width: 100%; min-width: 0; height: 44px; min-height: 44px; padding-block: 8px; font-family: inherit; font-size: 14px; line-height: 1.5; }
+.gp-login-card .field-hint { margin: 0; font-size: 11px; line-height: 1.65; }
+.gp-login-summary { display: flex; align-items: center; gap: 10px; margin: 10px 0 12px; padding: 9px 12px; border: 1px solid #f0d9c9; border-radius: 9px; background: #fff8f3; }
+.gp-login-summary > .icon { flex: 0 0 20px; color: var(--public-accent, #b34c1b); }
+.gp-login-summary > div { min-width: 0; }
+.gp-login-summary strong { display: block; color: var(--ink); font-size: 16px; line-height: 1.6; overflow-wrap: anywhere; }
+.gp-login-summary span { display: block; margin-top: 1px; color: var(--muted); font-size: 12px; line-height: 1.7; overflow-wrap: anywhere; }
+.gp-login-credentials { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 16px; }
+.gp-login-password { position: relative; display: flex; width: 100%; min-width: 0; height: 44px; }
+.gp-login-card .gp-login-password input { flex: 1 1 auto; width: 100%; height: 44px; padding-right: 64px; }
+.gp-login-password > button { position: absolute; inset: 0 0 0 auto; min-width: 58px; min-height: 44px; padding: 8px; border: 0; border-radius: 7px; background: transparent; color: var(--public-accent, #b34c1b); font: inherit; font-size: 14px; font-weight: 650; }
+.gp-login-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.gp-login-actions .button { min-height: 44px; padding-inline: 22px; font-size: 14px; }
+.gp-login-notice { margin: -6px 0 18px; padding: 12px 14px; border-radius: 8px; background: var(--sage, #f1f3f6); color: var(--muted); font-size: 13px; line-height: 1.8; }
+.gp-login-change-note { margin-bottom: 12px !important; }
+.gp-login-demo-note { margin: 6px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+#gpShell .public-national-marks { display: flex; flex-direction: row; width: auto; align-items: center; gap: 12px; }
+#gpShell .public-national-marks .india-flag { width: 60px; height: 40px; object-fit: contain; }
+@media (max-width: 800px) {
+  #gpShell .public-national-marks { flex-direction: row; width: auto; gap: 8px; }
+  #gpShell .public-national-marks .india-flag { width: 48px; height: 32px; }
+  .gp-login-card { padding: 20px; }
+  .gp-login-card input, .gp-login-card select { font-size: 16px; }
+}
+@media (max-width: 580px) {
+  .gp-login-location, .gp-login-credentials { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .gp-login-heading h1 { font-size: 26px; }
+  .gp-login-card { padding: 20px 17px; }
+  .gp-login-location > .field-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
+  .gp-login-actions { align-items: stretch; }
+  .gp-login-actions .button { width: 100%; }
+}
+
+/* Admin request queue: the visible rows and register share search/status scope. */
+.queue-toolbar { display: grid; grid-template-columns: minmax(180px, 1fr) minmax(240px, 1.45fr) minmax(145px, .8fr); align-items: center; gap: 12px; margin-bottom: 12px; }
+.queue-heading { min-width: 0; }
+.queue-heading h2 { margin: 0 !important; color: var(--ink); font-size: 18px; font-weight: 650; line-height: 1.45; }
+.queue-heading p { margin: 3px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.queue-search { display: flex; align-items: center; gap: 8px; min-width: 0; min-height: 48px; padding: 1px 3px 1px 14px; border: 1px solid transparent; border-radius: 24px; background: #eef2f7; transition: background .15s, box-shadow .15s; }
+.queue-search:hover { background: #e8edf4; }
+.queue-search > .icon { flex: 0 0 18px; color: var(--muted); }
+.queue-search input { flex: 1 1 auto; width: 100%; min-width: 0; min-height: 44px; padding: 8px 0; border: 0; border-radius: 0; outline: none; background: transparent; color: var(--ink); font: inherit; font-size: 14px; line-height: 1.5; }
+.queue-search:focus-within { border-color: #c8d6eb; background: #fff; box-shadow: 0 1px 5px rgb(23 36 59 / 12%); }
+.queue-search input:focus-visible { outline: none; }
+.queue-search input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.queue-search-clear { display: inline-grid; place-items: center; flex: 0 0 44px; width: 44px; min-width: 44px; min-height: 44px; padding: 10px; border: 0; border-radius: 50%; color: var(--muted); background: transparent; }
+.queue-search-clear:hover { color: var(--ink); background: var(--sage); }
+.queue-search-clear .icon { width: 16px; height: 16px; }
+.queue-search-filter { display: inline-grid; place-items: center; flex: 0 0 44px; width: 44px; min-width: 44px; min-height: 44px; padding: 10px; border: 0; border-radius: 50%; color: #586579; background: transparent; }
+.queue-search-filter:hover { color: var(--ink); background: #dfe7f0; }
+.queue-search-filter .icon { width: 19px; height: 19px; }
+.queue-status { min-width: 0; }
+.queue-status select { width: 100%; min-width: 0; min-height: 48px; padding: 9px 14px; border: 1px solid transparent; border-radius: 24px; background: #eef2f7; color: var(--ink); font: inherit; font-size: 14px; line-height: 1.5; }
+.queue-followup-note { margin-top: 12px !important; }
+#officeQueueResults .empty-state { padding: 24px 14px; }
+@media (max-width: 1100px) {
+  .queue-toolbar { grid-template-columns: minmax(160px, 1fr) minmax(210px, 1.35fr) minmax(135px, .8fr); gap: 10px; }
+}
+@media (max-width: 700px) {
+  .queue-toolbar { grid-template-columns: minmax(0, 1fr) minmax(125px, .75fr); gap: 10px; }
+  .queue-heading { grid-column: 1 / -1; }
+  .queue-search input, .queue-status select { font-size: 16px; }
+}
+@media (max-width: 390px) {
+  .queue-toolbar { grid-template-columns: minmax(0, 1fr); }
+  .queue-heading { grid-column: 1; }
+}

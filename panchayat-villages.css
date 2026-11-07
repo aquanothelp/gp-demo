@@ -1,0 +1,21 @@
+.panchayat-villages { margin: 18px 0; padding: 20px; }
+.panchayat-village-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px; margin-bottom: 14px; }
+.panchayat-village-kicker { margin: 0 0 4px; color: #b34c1b; font-size: 10px; font-weight: 650; letter-spacing: .7px; }
+.panchayat-village-heading h2, .panchayat-villages > h2 { margin: 0; font-size: 20px; line-height: 1.5; }
+.panchayat-village-count { padding: 4px 9px; border-radius: 6px; color: #296456; background: #eaf4ef; font-size: 12px; }
+.panchayat-village-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.panchayat-village { display: flex; align-items: flex-start; gap: 12px; min-width: 0; padding: 16px; border: 1px solid #e5e7eb; border-radius: 9px; background: #fffaf6; }
+.panchayat-village > .icon { flex-shrink: 0; width: 21px; height: 21px; margin-top: 3px; color: #b34c1b; }
+.panchayat-village > div { min-width: 0; }
+.panchayat-village h3 { margin: 0; color: #17243b; font-size: 16px; line-height: 1.6; overflow-wrap: anywhere; }
+.panchayat-village p { margin: 3px 0; color: #626875; font-size: 13px; overflow-wrap: anywhere; }
+.panchayat-village small { display: block; margin-top: 3px; color: #626875; font-size: 11px; line-height: 1.7; }
+.panchayat-village-placeholder { align-items: center; border-style: dashed; background: #fafbfc; color: #626875; }
+.panchayat-village-placeholder > .icon { color: #758094; }
+.panchayat-village-placeholder strong { font-size: 14px; font-weight: 500; }
+.panchayat-village-source { margin-top: 12px; color: #626875; font-size: 12px; line-height: 1.8; }
+.panchayat-village-source summary { display: flex; align-items: center; min-height: 44px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.panchayat-village-source p { margin: 3px 0 8px; }
+.panchayat-village-source a { display: inline-flex; align-items: center; min-height: 44px; }
+@media (max-width: 1000px) { .panchayat-village-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 580px) { .panchayat-villages { padding: 16px; } .panchayat-village-grid { grid-template-columns: minmax(0, 1fr); } .panchayat-village { padding: 14px; } }

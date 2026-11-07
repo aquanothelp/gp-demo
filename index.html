@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="mr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="description" content="An offline, illustrative Gram Panchayat citizen-service prototype. No official submissions or payments.">
+  <title>आपली ग्रामपंचायत · Chaklamba demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="roles.css">
+  <link rel="stylesheet" href="workflow.css">
+  <link rel="stylesheet" href="people.css">
+  <link rel="stylesheet" href="public-site.css">
+  <link rel="stylesheet" href="printing.css">
+  <link rel="stylesheet" href="village-art.css">
+  <link rel="stylesheet" href="site-search.css">
+  <link rel="stylesheet" href="panchayat-villages.css">
+  <script src="gp-registry-beed.js" defer></script>
+  <script src="gp-villages-beed.js" defer></script>
+  <script src="panchayat-villages.js" defer></script>
+  <script src="portal-access.js" defer></script>
+  <script src="enrollment.js" defer></script>
+  <script src="demo-data.js" defer></script>
+  <script src="people-data.js" defer></script>
+  <script src="people.js" defer></script>
+  <script src="public-site-data.js" defer></script>
+  <script src="public-site.js" defer></script>
+  <script src="printing.js" defer></script>
+  <script src="workflow.js" defer></script>
+  <script src="site-search.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">मुख्य आशयाकडे जा / Skip to content</a>
+  <svg class="icon-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8Z"/><path d="M14 3v6h5M8 13h8M8 17h5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2C9 7 5 11 5 15a7 7 0 0 0 14 0c0-4-4-8-7-13Z"/><path d="M9 16c0 2 1 3 3 3"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11a9 9 0 0 1-9 9H4l-2 2V11a9 9 0 1 1 19 0Z"/><path d="M7 9h9M7 13h6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L20 5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 21v-4a6 6 0 0 1 12 0v4M16 4a3 3 0 0 1 0 6m2 3a5 5 0 0 1 4 5v3"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 0 1 6 0c0 2-3 2-3 5m0 3v.1"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0v6l3 3H3l3-3Zm4 12h4"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5C8 2 4 3 2 4v16c4-2 7-1 10 1 3-2 6-3 10-1V4c-2-1-6-2-10 1Zm0 0v16"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 1v2m0 18v2M1 12h2m18 0h2M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3" fill="white"/><circle cx="15" cy="17" r="3" fill="white"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M3 16v5h18v-5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v13m-5-5 5 5 5-5M3 17v4h18v-4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 8a8 8 0 1 0 0 9M20 2v6h-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 2a14 14 0 0 1-7-7l2-2Z"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20 4c-3-2-6-1-8 2-2-3-5-4-8-2-5 4 0 10 8 17 8-7 13-13 8-17Z"/></symbol>
+    <symbol id="i-coins" viewBox="0 0 24 24"><ellipse cx="10" cy="6" rx="7" ry="3"/><path d="M3 6v5c0 4 14 4 14 0V6M3 11v5c0 4 14 4 14 0v-5m4 0v7c0 2-3 3-6 3"/></symbol>
+  </svg>
+
+  <div id="portalRoot" data-role="citizen">
+  <div id="gpShell" class="public-site gp-shared-site" data-auth-state="anonymous" data-active-gp="171415" data-page="home">
+    <header class="public-topbar gp-shared-header" id="workspaceHeader">
+      <button id="menuToggle" class="icon-button public-menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
+      <a href="#home" class="brand gp-shell-brand" data-route-link="home" aria-label="Gram Panchayat home"><img class="public-state-seal" src="assets/maharashtra-seal.png" width="48" height="48" alt="Maharashtra state seal / महाराष्ट्र शासन मुद्रा"></a>
+      <div class="public-gp-label"><strong id="shellGPName">चाकलांबा</strong><small><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span class="place-location">गेवराई · बीड</span></small></div>
+      <nav class="public-toplinks" aria-label="Quick links"><button type="button" data-route="about" data-shell-label="about">आपले गाव</button><button type="button" data-route="services" data-i18n="allServices">सर्व सेवा</button><button type="button" data-route="contact" data-shell-label="contact">संपर्क</button></nav>
+      <div class="gp-account-actions topbar-actions">
+        <button type="button" id="headerSiteSearch" class="site-search-trigger" aria-label="Search this website" aria-haspopup="dialog" aria-controls="siteSearchDialog" aria-expanded="false"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></button>
+        <button type="button" id="shellLogin" class="button primary" data-open-login>Login / प्रवेश</button>
+        <button type="button" id="activeRoleIndicator" class="active-role-indicator workspace-role-badge" popovertarget="roleViewPopover" aria-haspopup="dialog" aria-expanded="false" aria-controls="roleViewPopover" hidden>नागरिक दृश्य</button>
+        <button type="button" id="profileButton" class="profile-button" aria-haspopup="dialog" aria-label="माझे खाते" hidden><span class="user-avatar" aria-hidden="true">ना</span><span class="session-identity"><span class="profile-caption">माझे खाते</span><span class="user-label">नमुना नागरिक</span></span><svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button>
+      </div>
+      <div class="public-national-marks"><img class="india-flag" src="assets/india-flag.png" width="60" height="40" alt="Indian national flag / भारताचा राष्ट्रीय ध्वज"><picture><source srcset="assets/india-state-emblem.svg" type="image/svg+xml"><img class="india-emblem" src="assets/india-state-emblem.png" width="30" height="48" alt="State Emblem of India / भारताचे राजचिन्ह"></picture></div>
+      <div id="roleViewPopover" class="role-view-popover" popover="auto" role="dialog" aria-labelledby="demoRoleViewLabel" aria-describedby="rolePreviewNote">
+        <h2 id="demoRoleViewLabel" data-i18n="demoRoleView">डेमो भूमिका</h2><p id="rolePreviewNote">त्याच डेमो खात्यातील दृश्य निवडा; अधिकृत परवानग्या पडताळलेल्या नाहीत.</p>
+        <div class="view-switch" role="group" aria-labelledby="demoRoleViewLabel"><button id="citizenRoleButton" type="button" data-view="citizen" class="active" aria-pressed="true" data-i18n="citizen">नागरिक</button><button id="adminRoleButton" type="button" data-view="office" aria-pressed="false" data-i18n="office">प्रशासक</button></div>
+      </div>
+    </header>
+    <aside id="sidebar" class="public-sidebar" aria-label="Gram Panchayat navigation">
+      <p id="sidebarDistrict" class="public-side-caption">बीड · महाराष्ट्र</p>
+      <nav id="publicNav" class="public-nav primary-nav" aria-label="Gram Panchayat website">
+        <button class="public-nav-link nav-btn active" data-route="home" type="button"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg><span data-shell-label="home">मुख्यपृष्ठ</span></button>
+        <button class="public-nav-link nav-btn" data-route="about" type="button"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span data-shell-label="about">आपले गाव</span></button>
+        <button class="public-nav-link nav-btn" data-route="leadership" type="button"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><span data-shell-label="leadership">पदाधिकारी व कर्मचारी</span></button>
+        <button class="public-nav-link nav-btn" data-route="services" type="button"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span data-i18n="allServices">सर्व सेवा</span></button>
+        <button class="public-nav-link nav-btn" data-route="contact" type="button"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span data-shell-label="contact">संपर्क व भेट</span></button>
+      </nav>
+      <div class="sidebar-context" hidden><span id="sidebarRoleContext"></span></div>
+      <p id="roleNavHeading" class="public-side-caption gp-session-heading" hidden>तुमचे खाते</p>
+      <nav id="citizenNav" class="public-nav primary-nav" aria-label="Citizen navigation" hidden>
+        <button class="public-nav-link nav-btn" data-route="requests" type="button"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><span data-i18n="myRequests">माझे अर्ज</span><span id="requestCount" class="nav-count"></span></button>
+        <button class="public-nav-link nav-btn" data-route="track" type="button"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><span data-i18n="track">अर्जाची स्थिती</span></button>
+        <button class="public-nav-link nav-btn" data-route="people" type="button"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="people">पदाधिकारी व संपर्क</span></button>
+        <button class="public-nav-link nav-btn" data-route="help" type="button"><svg class="icon" aria-hidden="true"><use href="#i-help"/></svg><span data-i18n="help">मदत व मार्गदर्शन</span></button>
+      </nav>
+      <nav id="adminNav" class="public-nav primary-nav" aria-label="Admin navigation" hidden>
+        <button class="public-nav-link nav-btn" data-admin-route="queue" type="button"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span data-i18n="adminQueue">अर्जांची यादी</span><span id="adminRequestCount" class="nav-count"></span></button>
+        <button class="public-nav-link nav-btn" data-admin-route="workspace" type="button"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="adminWorkspace">ग्रामपंचायत कार्यालय</span></button>
+        <button class="public-nav-link nav-btn" data-admin-route="people" type="button"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="people">पदाधिकारी व संपर्क</span></button>
+        <button class="public-nav-link nav-btn" data-admin-route="permissions" type="button"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="adminPermissions">वापरकर्ते व परवानग्या</span></button>
+      </nav>
+      <div id="adminFutureModules" hidden><p class="public-side-caption gp-session-heading" data-i18n="comingLater">पुढील टप्प्यात</p><nav class="public-nav future-nav" aria-label="Future modules">
+        <button class="public-nav-link nav-btn" data-placeholder="meetings" type="button"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="meetings">ग्रामसभा व ठराव</span></button>
+        <button class="public-nav-link nav-btn" data-placeholder="works" type="button"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="works">विकासकामे</span></button>
+        <button class="public-nav-link nav-btn" data-placeholder="finance" type="button"><svg class="icon" aria-hidden="true"><use href="#i-coins"/></svg><span data-i18n="finance">कर व अर्थव्यवस्था</span></button>
+      </nav></div>
+      <div id="citizenSidebarHelp" hidden></div><p id="adminSidebarNote" class="admin-sidebar-note" data-i18n="roleDemoNote" hidden></p>
+      <div class="public-side-bottom"><button type="button" class="text-button" id="publicGPChooser"><span data-shell-label="explore">दुसरी ग्रामपंचायत पाहा</span><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></button><button type="button" class="text-button" id="publicPreferences" aria-haspopup="dialog"><span data-shell-label="preferences">संकेतस्थळ पसंती</span><svg class="icon" aria-hidden="true"><use href="#i-settings"/></svg></button></div>
+    </aside>
+    <button class="public-shade" id="mobileShade" type="button" aria-label="Close navigation" hidden></button>
+    <div class="public-workspace">
+      <div class="village-edge-art" aria-hidden="true"></div>
+      <main id="mainContent" class="public-content main-content" tabindex="-1"><div id="routeContent" tabindex="-1"></div><section id="enrollmentRoot" class="gp-auth-content" tabindex="-1" aria-label="Gram Panchayat Login" hidden></section></main>
+      <div id="sharedFooter"></div>
+    </div>
+  </div>
+  <dialog id="appDialog" class="app-dialog" aria-labelledby="dialogTitle"><div id="modalContent"></div></dialog>
+  <dialog id="printPreviewDialog" class="app-dialog print-preview-dialog" aria-labelledby="printPreviewTitle"><div id="printPreviewContent"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </div>
+  <div id="publicDialogs"></div>
+  <dialog id="siteSearchDialog" class="site-search-dialog" aria-labelledby="siteSearchTitle"></dialog>
+  <noscript><div class="noscript-note">या डेमोसाठी JavaScript सुरू करा. / Enable JavaScript for this interactive demo.</div></noscript>
+</body>
+</html>
+

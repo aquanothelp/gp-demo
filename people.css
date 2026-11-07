@@ -1,0 +1,98 @@
+/* Public directory components share the portal's neutral tokens and control scale. */
+.directory-context { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 16px; padding: 12px 16px; border: 1px solid #e0e5ef; border-radius: var(--radius); background: #f3f5fa; color: #53617c; }
+.directory-context > .icon { width: 20px; height: 20px; margin-top: 3px; }
+.directory-context strong { color: #3e4b64; font-size: 13px; font-weight: 600; }
+.directory-context p { margin: 5px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.people-office-location { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 16px; padding: 12px 16px; border: 1px solid var(--line); border-radius: 10px; color: var(--muted); background: #fafbfc; }
+.people-office-location > .icon { flex-shrink: 0; width: 18px; height: 18px; margin-top: 3px; color: var(--accent); }
+.people-office-location > div { min-width: 0; }
+.people-office-location strong { color: #40506a; font-size: 13px; font-weight: 600; }
+.people-office-location p { margin: 5px 0; color: #46546a; font-size: 13px; overflow-wrap: anywhere; }
+.people-office-location small { display: block; font-size: 11px; line-height: 1.85; }
+.people-office-location a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: 12px; }
+.people-group { margin-top: 20px; }
+.people-group-count { color: var(--muted); font-size: 12px; }
+.people-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.people-overview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.people-overview-empty { padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); color: var(--muted); background: #fafbfc; font-size: 13px; line-height: 1.8; }
+.person-card { position: relative; display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: white; }
+.person-card:hover, .public-person-card:hover { border-color: #c9a287; }
+.person-card-open { position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; border-radius: inherit; background: transparent; cursor: pointer; }
+.person-card-open:focus-visible, .public-site .person-card-open:focus-visible { outline: 3px solid #2457a7; outline-offset: -4px; }
+.person-card-caption { min-width: 0; padding: 13px 16px 14px; }
+.person-thumbnail.person-avatar, .person-thumbnail.public-person-avatar { display: grid; place-items: center; width: 100%; height: auto; min-height: 170px; max-height: 230px; aspect-ratio: 4 / 3; overflow: hidden; border: 0; border-bottom: 1px solid #e5e7eb; border-radius: 0; color: #a9b2c0; background: #f1f3f6; }
+.person-thumbnail .person-photo-placeholder { width: auto; height: 88%; max-width: 90%; fill: currentColor; }
+.person-thumbnail img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.person-avatar { display: inline-grid; place-items: center; width: 88px; height: 88px; flex-shrink: 0; overflow: hidden; border: 1px solid #dce2eb; border-radius: 18px; color: #526076; background: #f3f5f8; font-size: 27px; font-weight: 600; letter-spacing: .5px; }
+.person-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.person-profile-intro[data-person-category="elected"] .person-avatar { border-color: var(--orange-line); color: var(--orange); background: var(--orange-soft); }
+.person-profile-intro[data-person-category="staff"] .person-avatar { border-color: var(--green-line); color: var(--green); background: var(--green-soft); }
+.person-avatar.large { width: 112px; height: 112px; border-radius: 21px; font-size: 35px; }
+.person-role { color: #657086; font-size: 12px; line-height: 1.7; }
+.person-card h3 { margin: 0 0 3px; color: #2d3545; font-size: 16px; font-weight: 650; line-height: 1.5; overflow-wrap: anywhere; }
+.person-card .person-role { margin: 0; }
+.person-evidence { display: inline-flex; align-self: flex-start; max-width: 100%; padding: 3px 7px; border: 1px solid #e4e7ed; border-radius: 5px; color: #626b7b; background: #f8f9fb; font-size: 10px; line-height: 1.7; }
+.person-evidence.reported { border-color: #ebdfc9; color: #835b25; background: #fdf8ee; }
+.person-evidence.official-retrieval { border-color: var(--blue-line); color: #2457a7; background: #edf3fc; }
+.person-evidence.user-screenshot { border-color: #ead7be; color: #84571f; background: #fff8ee; }
+.person-evidence.official-listing { border-color: #dce3ed; color: #465b79; background: #f3f6fb; }
+.person-responsibility { flex: 1; margin: 16px 0 20px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.person-office { display: flex; align-items: center; gap: 7px; margin-bottom: 16px; color: var(--muted); font-size: 12px; }
+.person-office .icon { width: 15px; height: 15px; }
+.person-card-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 12px; margin-top: auto; padding-top: 12px; border-top: 1px solid #eef0f5; }
+.person-phone { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; color: #3f537e; font-size: 13px; font-weight: 600; text-decoration: none; font-variant-numeric: tabular-nums; }
+a.person-phone:hover { text-decoration: underline; }
+.person-phone .icon { width: 15px; height: 15px; }
+.person-phone small { display: block; margin-top: 3px; color: var(--muted); font-size: 10px; font-weight: 400; }
+.person-contact-missing { color: var(--muted); font-size: 11px; }
+.person-profile-button { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; padding: 7px 0 7px 8px; background: transparent; color: #36548d; font-size: 13px; font-weight: 600; }
+.person-profile-button:hover { text-decoration: underline; text-underline-offset: 3px; }
+.person-profile-button .icon { width: 14px; height: 14px; }
+.people-source-note { margin: -3px 0 18px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.people-provenance { margin-top: 20px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; line-height: 1.8; }
+.people-provenance summary { min-height: 44px; color: #4b5c79; cursor: pointer; }
+.people-provenance p { max-width: 900px; margin: 8px 0 0; }
+.person-profile-intro { display: flex; align-items: flex-start; gap: 19px; margin-bottom: 14px; }
+.person-profile-intro > div { min-width: 0; }
+.person-profile-intro h3 { margin: 0 0 5px; font-size: 22px; overflow-wrap: anywhere; }
+.person-profile-intro p { margin: 0 0 7px; color: var(--muted); font-size: 13px; }
+.person-profile-detail { color: var(--muted); font-size: 14px; line-height: 1.8; }
+.person-photo-note { margin: 0 0 20px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.person-profile-records { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 20px; margin: 16px 0; }
+.person-profile-records > div { min-width: 0; padding: 10px 0; border-top: 1px solid var(--line); }
+.person-profile-records dt { color: var(--muted); font-size: 11px; }
+.person-profile-records dd { margin: 5px 0 0; color: #3c475c; font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
+.person-profile-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; padding: 14px 17px; border: 1px solid #e2e7f0; border-radius: 9px; color: var(--muted); background: #f7f9fc; font-size: 12px; }
+.person-profile-contact > a { display: inline-flex; align-items: center; min-height: 44px; overflow-wrap: anywhere; }
+.person-source-detail { margin-top: 20px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.person-source-detail p { margin-bottom: 6px; }
+.person-source-detail a { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; font-weight: 600; }
+.person-source-detail a .icon { width: 14px; height: 14px; }
+.person-source-records { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); }
+.person-source-records > h3 { margin: 0 0 10px; color: #303d53; font-size: 18px; line-height: 1.6; }
+.person-evidence-record { min-width: 0; margin-top: 16px; padding: 18px; border: 1px solid #dce3ed; border-radius: 10px; background: #fff; }
+.person-evidence-record[data-source-kind="user-screenshot"] { border-color: #e8d8c4; }
+.person-source-ordinal { display: block; margin-bottom: 5px; color: var(--muted); font-size: 10px; line-height: 1.8; overflow-wrap: anywhere; }
+.person-evidence-record h4 { margin: 0 0 10px; color: #35435c; font-size: 14px; font-weight: 650; line-height: 1.7; overflow-wrap: anywhere; }
+.person-evidence-record .person-profile-records { margin: 15px 0; gap: 0 18px; }
+.person-evidence-record .person-profile-records > div { padding-block: 11px; }
+.person-evidence-record .person-profile-records dd { white-space: pre-wrap; }
+.person-masked-contacts { padding: 13px 14px; border: 1px solid #e5e8ee; border-radius: 7px; color: #586477; background: #f7f8fa; font-size: 12px; line-height: 1.8; }
+.person-masked-contacts strong { display: block; margin-bottom: 7px; color: #46546b; font-size: 12px; font-weight: 600; }
+.person-masked-contacts p { display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 9px; margin: 5px 0; }
+.person-masked-contacts code { color: #3e4b61; font-size: 12px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.person-masked-contacts small { display: block; margin-top: 8px; color: var(--muted); font-size: 11px; }
+.person-source-caveat { margin: 13px 0 0; color: var(--muted); font-size: 12px; line-height: 1.85; }
+.person-evidence-record > footer { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; margin-top: 10px; }
+.person-evidence-record > footer a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; max-width: 100%; font-size: 12px; text-decoration: none; overflow-wrap: anywhere; }
+.person-evidence-record > footer .icon { width: 14px; height: 14px; }
+@media (max-width: 1200px) { .people-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .people-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .people-overview-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .directory-context { padding: 15px; }
+  .person-profile-intro { align-items: flex-start; gap: 12px; }
+  .person-profile-intro h3 { font-size: 20px; }
+  .person-profile-records { grid-template-columns: minmax(0, 1fr); }
+  .person-evidence-record { padding: 15px; }
+}
