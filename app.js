@@ -16,7 +16,7 @@
     catch (_) { memoryOnly.add(key); /* File/private-mode/quota fallback stays in this tab. */ }
   };
   const seedRegistry = [
-    { code: '171415', en: 'Chaklamba', mr: 'चाकलांबा' },
+    { code: '171415', en: 'Chaklamba', mr: 'चकलांबा' },
     { code: '171410', en: 'Bhogalgaon', mr: 'भोगलगांव' },
     { code: '171411', en: 'Bhojgaon', mr: 'भोजगांव' },
     { code: '171412', en: 'Borgaon Bk.', mr: 'बोरगांव बु.' }
@@ -56,7 +56,7 @@
   const strings = {
     people: ['People & contacts', 'पदाधिकारी व संपर्क'],
     demoRoleView: ['View', 'भूमिका'], adminQueue: ['Request queue', 'अर्जांची यादी'], adminWorkspace: ['Office details', 'कार्यालयाची माहिती'], adminPermissions: ['Users & permissions', 'वापरकर्ते व परवानग्या'], adminNavigation: ['ADMINISTRATION', 'प्रशासन'], adminContext: ['ADMIN WORKSPACE', 'प्रशासक कार्यालय'], roleDemoNote: ['Demo role view. Real officer permissions are not verified.', 'डेमो भूमिका. प्रत्यक्ष अधिकाऱ्यांची परवानगी पडताळलेली नाही.'],
-    brand: ['Apli Grampanchayat', 'आपली ग्रामपंचायत'], prototype: ['CONCEPT DEMO', 'संवादासाठी डेमो'], sampleOnly: ['Illustrative data only', 'फक्त नमुना माहिती'], citizen: ['Citizen', 'नागरिक'], office: ['Admin', 'प्रशासक'], reset: ['Reset', 'रीसेट'], citizenService: ['CITIZEN SERVICE CENTRE', 'नागरिक सेवा केंद्र'], yourServices: ['YOUR SERVICES', 'तुमच्या सेवा'], home: ['Overview', 'मुख्यपृष्ठ'], allServices: ['All services', 'सर्व सेवा'], myRequests: ['My requests', 'माझे अर्ज'], track: ['Track a request', 'अर्जाची स्थिती'], help: ['Help & guidance', 'मदत व मार्गदर्शन'], comingLater: ['FUTURE MODULES', 'पुढील टप्प्यात'], meetings: ['Gram Sabha & resolutions', 'ग्रामसभा व ठराव'], works: ['Village development', 'विकासकामे'], finance: ['Taxes & finance', 'कर व अर्थव्यवस्था'], needHelp: ['A little help goes a long way.', 'अर्जासाठी मदत'], helpCopy: ['Understand the steps, or explore assisted applications at the office.', 'प्रक्रिया समजून घ्या. कार्यालयाच्या मदतीने अर्ज करण्याचा पर्याय पाहा.'], getHelp: ['Find help', 'मदत पाहा'], villageFirst: ['Your village. Your services.', 'तुमचे गाव. तुमच्या सेवा.'], yourPanchayat: ['YOUR GRAM PANCHAYAT', 'तुमची ग्रामपंचायत'], placeLocation: ['Georai · Beed', 'गेवराई · बीड'], demoCitizen: ['Citizen', 'नागरिक'], footerDemo: ['Concept demo · No official submissions', 'संकल्पना डेमो · कोणताही शासकीय अर्ज पाठवला जात नाही'], apply: ['Apply now', 'अर्ज करा'], viewAll: ['View all services', 'सर्व सेवा पाहा'], reference: ['Request reference', 'अर्ज क्रमांक'], submitted: ['Submitted', 'अर्ज नोंदवला'], review: ['In review', 'पडताळणी सुरू'], action: ['Details needed', 'अधिक माहिती आवश्यक'], completed: ['Complete', 'डेमो केस पूर्ण'], back: ['Back', 'मागे'], next: ['Continue', 'पुढे जा'], close: ['Close', 'बंद करा'], submit: ['Submit request', 'अर्ज नोंदवा'], details: ['Details', 'माहिती'], view: ['View request', 'अर्ज पाहा'], cancel: ['Cancel', 'रद्द करा']
+    brand: ['Apli Grampanchayat', 'आपली ग्रामपंचायत'], prototype: ['CONCEPT DEMO', 'संवादासाठी डेमो'], sampleOnly: ['Illustrative data only', 'फक्त नमुना माहिती'], citizen: ['Citizen', 'नागरिक'], office: ['Admin', 'प्रशासक'], reset: ['Reset', 'रीसेट'], citizenService: ['CITIZEN SERVICE CENTRE', 'नागरिक सेवा केंद्र'], yourServices: ['YOUR SERVICES', 'तुमच्या सेवा'], home: ['Overview', 'मुख्यपृष्ठ'], allServices: ['All services', 'सर्व सेवा'], myRequests: ['My requests', 'माझे अर्ज'], track: ['Track a request', 'अर्जाची स्थिती'], help: ['Help & guidance', 'मदत व मार्गदर्शन'], comingLater: ['MANAGEMENT', 'व्यवस्थापन'], meetings: ['Gram Sabha & resolutions', 'ग्रामसभा व ठराव'], works: ['Village development', 'विकासकामे'], finance: ['Taxes & finance', 'कर व अर्थव्यवस्था'], needHelp: ['A little help goes a long way.', 'अर्जासाठी मदत'], helpCopy: ['Understand the steps, or explore assisted applications at the office.', 'प्रक्रिया समजून घ्या. कार्यालयाच्या मदतीने अर्ज करण्याचा पर्याय पाहा.'], getHelp: ['Find help', 'मदत पाहा'], villageFirst: ['Your village. Your services.', 'तुमचे गाव. तुमच्या सेवा.'], yourPanchayat: ['YOUR GRAM PANCHAYAT', 'तुमची ग्रामपंचायत'], placeLocation: ['Georai · Beed', 'गेवराई · बीड'], demoCitizen: ['Citizen', 'नागरिक'], footerDemo: ['Concept demo · No official submissions', 'संकल्पना डेमो · कोणताही शासकीय अर्ज पाठवला जात नाही'], apply: ['Apply now', 'अर्ज करा'], viewAll: ['View all services', 'सर्व सेवा पाहा'], reference: ['Request reference', 'अर्ज क्रमांक'], submitted: ['Submitted', 'अर्ज नोंदवला'], review: ['In review', 'पडताळणी सुरू'], action: ['Details needed', 'अधिक माहिती आवश्यक'], completed: ['Complete', 'डेमो केस पूर्ण'], back: ['Back', 'मागे'], next: ['Continue', 'पुढे जा'], close: ['Close', 'बंद करा'], submit: ['Submit request', 'अर्ज नोंदवा'], details: ['Details', 'माहिती'], view: ['View request', 'अर्ज पाहा'], cancel: ['Cancel', 'रद्द करा']
   };
   Object.assign(strings, {
     submitted: ['Received', 'अर्ज प्राप्त'], action: ['Information needed', 'अधिक माहिती हवी'],
@@ -65,7 +65,7 @@
     resolved: ['Resolved — confirmation needed', 'समस्या निकाली — पुष्टी हवी'],
     referred: ['Referred — next office', 'पुढील कार्यालयाकडे पाठवले']
   });
-  const publicRoutes = new Set(['home', 'about', 'leadership', 'services', 'contact', 'people', 'help']);
+  const publicRoutes = new Set(['home', 'about', 'leadership', 'services', 'schemes', 'news', 'development', 'places', 'contact', 'people', 'help']);
   const citizenRoutes = new Set(['home', 'services', 'requests', 'track', 'people', 'help']);
   const adminRoutes = new Set(['queue', 'workspace', 'people', 'permissions']);
   const futureRoutes = new Set(['meetings', 'works', 'finance']);
@@ -89,8 +89,9 @@
   const t = key => strings[key] ? L(...strings[key]) : key;
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const icon = name => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
+  const cardIcon = name => `<svg class="illustrated-icon" viewBox="0 0 48 48" aria-hidden="true"><use href="#art-${({file:'file',shield:'file',drop:'drop',search:'search',home:'home',users:'users',chat:'users',sun:'sun',heart:'heart'})[name] || 'file'}"/></svg>`;
   const gpObject = code => registry.find(gp => gp.code === code) || seedRegistry[0];
-  const gpName = (code = state.gp) => gpObject(code)[state.lang];
+  const gpName = (code = state.gp) => window.GP_PUBLIC_SITE_DATA?.displayName(gpObject(code), state.lang) || gpObject(code)[state.lang];
   const serviceById = id => services.find(service => service.id === id) || services[0];
   const serviceName = id => serviceById(id)[state.lang];
   const statusPill = status => `<span class="status-pill ${esc(status)}">${status === 'completed' ? icon('check') : '<span class="status-dot"></span>'}${t(status)}</span>`;
@@ -209,10 +210,12 @@
   }
   function openPrintPreview(kind, requestId = '', service = '') {
     if (!authenticatedGP || state.gp !== authenticatedGP || !window.GPPrinting) return;
-    if (['register', 'gp-profile', 'assessment-register'].includes(kind) && state.view !== 'office') return;
+    if (['register', 'gp-profile', 'assessment-register', 'module-report'].includes(kind) && state.view !== 'office') return;
     if (kind === 'citizen-list' && state.view !== 'citizen') return;
-    if (!['acknowledgement', 'application', 'history', 'certificate', 'format', 'register', 'citizen-list', 'gp-profile', 'assessment-register'].includes(kind)) return;
-    const request = requestId ? findRequest(requestId) : null;
+    if (!['acknowledgement', 'application', 'history', 'certificate', 'format', 'register', 'citizen-list', 'gp-profile', 'assessment-register', 'module-report'].includes(kind)) return;
+    const request = requestId && kind !== 'module-report' ? findRequest(requestId) : null;
+    const moduleRecord = kind === 'module-report' && futureRoutes.has(service) ? moduleRecords(service).find(r=>r.id===requestId) : null;
+    if(kind==='module-report' && !moduleRecord)return;
     if (['acknowledgement', 'application', 'history', 'certificate', 'assessment-register'].includes(kind) && !request) return;
     if (kind === 'assessment-register' && request.service !== 'assessment') return;
     if (kind === 'certificate' && (!workflow.canPrintCertificate(request) || !window.GPPrinting.supportsCertificate(request.service))) return;
@@ -222,19 +225,23 @@
     const samiti = registrySamitis.find(item => item.code === gp.samitiCode);
     const requests = kind === 'register' ? visibleOfficeRequests() : getRequests();
     preparedPrint = window.GPPrinting.renderDocument({
-      kind, lang: state.lang, service: service || request?.service, request, requests,
+      kind, lang: state.lang, service: service || request?.service, request, requests, record: moduleRecord ? localizedRecord(moduleRecord) : null,
       filter: [(state.officeFilter === 'all' ? L('All requests', 'सर्व अर्ज') : t(state.officeFilter)), ...(kind === 'register' && state.officeQuery.trim() ? [L('Search: ', 'शोध: ') + state.officeQuery.trim()] : [])].join(' · '),
-      gp: { code: state.gp, name: gpName(), en: gp.en, mr: gp.mr, state: 'Maharashtra', district: district?.[state.lang] || district?.en || '', samiti: samiti?.[state.lang] || samiti?.en || '', officeName: configs[state.gp]?.officeName || '', services: getServices().map(item => item[state.lang]) }
+      gp: { code: state.gp, name: gpName(), en: gp.en, mr: window.GP_PUBLIC_SITE_DATA?.displayName(gp, 'mr') || gp.mr, state: 'Maharashtra', district: district?.[state.lang] || district?.en || '', samiti: window.GP_PUBLIC_SITE_DATA.displayName(samiti, state.lang) || '', officeName: configs[state.gp]?.officeName || '', services: getServices().map(item => item[state.lang]) }
     });
+    showPreparedPrint();
+  }
+  function showPreparedPrint() {
     printReturnFocus = document.activeElement;
-    printContent.innerHTML = `<header class="modal-header"><div><span class="eyebrow">${esc(gpName())} · GP ${state.gp}</span><h2 id="printPreviewTitle">${esc(preparedPrint.title)}</h2><p>${L('DEMO preview · Check the source/version shown on the document.', 'डेमो नमुना · कागदपत्रावरील स्रोत आणि आवृत्ती तपासा.')}</p></div><button type="button" class="icon-button" data-close-print aria-label="${t('close')}">${icon('close')}</button></header><div class="print-preview-body">${preparedPrint.html}</div><footer class="modal-footer"><button type="button" class="button secondary" data-close-print>${t('close')}</button><button type="button" class="button primary" id="printPreparedDocument">${icon('file')}${L('Print document', 'कागदपत्र छापा')}</button></footer>`;
+    printContent.innerHTML = `<header class="modal-header"><div><span class="eyebrow">${esc(gpName())} · GP ${state.gp}</span><h2 id="printPreviewTitle">${esc(preparedPrint.title)}</h2><p>${L('DEMO preview · Check the source/version shown on the document.', 'डेमो नमुना · कागदपत्रावरील स्रोत आणि आवृत्ती तपासा.')}</p></div><button type="button" class="icon-button" data-close-print aria-label="${t('close')}">${icon('close')}</button></header><div class="print-preview-body">${preparedPrint.html}</div><footer class="modal-footer"><button type="button" class="button secondary" data-close-print>${t('close')}</button><button type="button" class="button secondary" id="sharePreparedDocument">${icon('arrow')}${L('Share', 'शेअर करा')}</button><button type="button" class="button primary" id="printPreparedDocument">${icon('file')}${L('Print document', 'कागदपत्र छापा')}</button></footer>`;
     if (!printDialog.open) printDialog.showModal();
   }
   function translateShell() {
     const signedIn = hasSession(), isAdmin = signedIn && state.view === 'office';
+    updateNotifications();
     document.documentElement.lang = state.lang;
     document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
-    const labels = { home: L('Home', 'मुख्यपृष्ठ'), about: L('Our villages', 'आपली गावे'), leadership: L('Leadership & team', 'पदाधिकारी व कर्मचारी'), contact: L('Contact & visit', 'संपर्क व भेट'), explore: L('Explore another Panchayat', 'दुसरी ग्रामपंचायत पाहा'), preferences: L('Website preferences', 'संकेतस्थळ पसंती') };
+    const labels = { home: L('Home', 'मुख्यपृष्ठ'), about: L('Our villages', 'आपली गावे'), leadership: L('Leadership & team', 'पदाधिकारी व कर्मचारी'), places: L('Places','महत्त्वाची ठिकाणे'), development: L('Development','विकासकामे'), news: L('News', 'सूचना'), schemes: L('Schemes', 'योजना'), contact: L('Contact & visit', 'संपर्क'), explore: L('Explore another Panchayat', 'दुसरी ग्रामपंचायत पाहा'), preferences: L('Website preferences', 'संकेतस्थळ पसंती') };
     document.querySelectorAll('[data-shell-label]').forEach(el => { el.textContent = labels[el.dataset.shellLabel] || ''; });
     shell.dataset.authState = signedIn ? 'signed-in' : 'anonymous';
     shell.dataset.activeGp = state.gp; shell.dataset.authenticatedGp = authenticatedGP || ''; shell.dataset.page = state.route;
@@ -244,7 +251,7 @@
     document.getElementById('shellGPName').textContent = gpName();
     const district = registryDistricts.find(item => item.code === gpObject(state.gp).districtCode);
     const samiti = registrySamitis.find(item => item.code === gpObject(state.gp).samitiCode);
-    document.querySelector('.place-location').textContent = [samiti?.[state.lang] || samiti?.en, district?.[state.lang] || district?.en].filter(Boolean).join(' · ');
+    document.querySelector('.place-location').textContent = [window.GP_PUBLIC_SITE_DATA.displayName(samiti, state.lang), district?.[state.lang] || district?.en].filter(Boolean).join(' · ');
     document.getElementById('sidebarDistrict').textContent = [district?.[state.lang] || district?.en, L('Maharashtra', 'महाराष्ट्र')].filter(Boolean).join(' · ');
     document.getElementById('shellLogin').hidden = signedIn; document.getElementById('shellLogin').textContent = L('Login', 'लॉगिन');
     document.getElementById('profileButton').hidden = !signedIn;
@@ -299,7 +306,7 @@
   }
 
   function serviceCard(service) {
-    return `<button type="button" class="service-card" data-service-id="${service.id}"><span class="service-card-head"><span class="service-icon ${service.tone}">${icon(service.icon)}</span><span class="service-card-copy"><span class="service-tag">${L(service.category === 'local' ? 'LOCAL SERVICE' : 'CERTIFICATES & RECORDS', service.category === 'local' ? 'स्थानिक सेवा' : 'दाखले व नोंदी')}</span><strong>${esc(service[state.lang])}</strong></span></span><span class="service-meta">${esc(L(...service.desc))}</span><span class="service-bottom"><span>${hasSession() ? (service.id === 'grievance' ? L('Report an issue', 'समस्या नोंदवा') : t('apply')) : L('View service', 'सेवा पाहा')}</span>${icon('arrow')}</span></button>`;
+    return `<button type="button" class="service-card" data-service-id="${service.id}"><span class="service-card-head"><span class="service-icon ${service.tone}">${cardIcon(service.icon)}</span><span class="service-card-copy"><span class="service-tag">${L(service.category === 'local' ? 'LOCAL SERVICE' : 'CERTIFICATES & RECORDS', service.category === 'local' ? 'स्थानिक सेवा' : 'दाखले व नोंदी')}</span><strong>${esc(service[state.lang])}</strong></span></span><span class="service-meta">${esc(L(...service.desc))}</span><span class="service-bottom"><span>${hasSession() ? (service.id === 'grievance' ? L('Report an issue', 'समस्या नोंदवा') : t('apply')) : L('View service', 'सेवा पाहा')}</span>${icon('arrow')}</span></button>`;
   }
   function trackingForm(compact = false) {
     return `<form id="trackingForm" class="tracking-form"><label for="trackingId">${t('reference')}</label><div class="input-action"><input id="trackingId" name="trackingId" placeholder="DEMO-${state.gp}-001" autocomplete="off" required><button type="submit" class="button primary ${compact ? 'icon-only' : ''}" aria-label="${t('track')}">${compact ? icon('arrow') : t('track')}</button></div><p class="field-hint">${L('Use the reference on your demo acknowledgement.', 'डेमो पावतीवरील अर्ज क्रमांक वापरा.')}</p></form><div id="trackingError" class="inline-error" role="alert" hidden></div>`;
@@ -388,10 +395,114 @@
   function renderHelp() {
     root.innerHTML = `${breadcrumb(t('help'))}${titleBlock(L('Help', 'मदत'), L('A simple guide to using your Panchayat service portal.', 'ग्रामपंचायत सेवा पोर्टल वापरण्याचे सोपे मार्गदर्शन.'))}<div class="help-grid"><section class="panel"><span class="service-icon sage">${icon('file')}</span><h2>${L('Apply in three small steps', 'तीन सोप्या पायऱ्यांत अर्ज')}</h2><ol class="help-steps"><li>${L('Choose the service you need.', 'हवी असलेली सेवा निवडा.')}</li><li>${L('Add sample applicant and request details.', 'नमुना अर्जदार व अर्जाची माहिती भरा.')}</li><li>${L('Save the demo reference and follow updates.', 'डेमो अर्ज क्रमांक जतन करा आणि स्थिती पाहा.')}</li></ol><button type="button" class="button primary" data-route="services">${t('allServices')}${icon('arrow')}</button></section><section class="panel"><span class="service-icon sand">${icon('users')}</span><h2>${L('Prefer help at the office?', 'कार्यालयाची मदत हवी?')}</h2><p>${L('An assisted journey helps an operator record a request with the citizen. This button demonstrates that channel with sample details.', 'कार्यालयातील कर्मचाऱ्याच्या मदतीने अर्ज करता येईल. या बटणातून नमुना माहितीसह तो पर्याय पाहा.')}</p><button type="button" class="button secondary" data-assisted="birth">${L('Try an assisted demo request', 'मदतीने अर्ज करण्याचा डेमो पाहा')}</button><p class="field-hint">${L('No office hours, phone number or live helpdesk is asserted in this prototype.', 'या डेमोमध्ये प्रत्यक्ष कार्यालयीन वेळा, दूरध्वनी किंवा मदत केंद्र जोडलेले नाही.')}</p></section><section class="panel"><span class="service-icon blue">${icon('search')}</span><h2>${L('Asked for more details?', 'अधिक माहिती मागितली आहे?')}</h2><p>${L('Open your request, read the office note and send a clarification. The updated timeline shows what you sent.', 'अर्ज उघडा, कार्यालयाची सूचना वाचा आणि अधिक माहिती पाठवा. ती अर्जाच्या प्रक्रियेत दिसेल.')}</p><button type="button" class="text-button" data-route="requests">${t('myRequests')}${icon('arrow')}</button></section></div>`;
   }
+  const moduleState = { query: '', filter: 'all' };
+  const moduleStatus = status => ({planned:L('Planned','नियोजित'), active:L('In progress','सुरू'), complete:L('Complete','पूर्ण')})[status] || status;
+  const moduleRecords = (module = state.route) => (window.GP_DEMO_MODULES?.[module] || []).filter(item => item.gpCode === state.gp);
+  const localizedRecord = record => ({ gpCode: record.gpCode, id: record.id, title: L(record.title.en,record.title.mr), summary:L(record.summary.en,record.summary.mr), fields:[[L('Type','प्रकार'),L(record.type.en,record.type.mr)],[L('Status','स्थिती'),moduleStatus(record.status)],...record.fields.map(f=>[L(f.label.en,f.label.mr),L(f.value.en,f.value.mr)])] });
+  function moduleResults() {
+    const host=document.getElementById('moduleResults'); if(!host)return;
+    const query=moduleState.query.normalize('NFKC').toLocaleLowerCase();
+    const records=moduleRecords().filter(r=>(moduleState.filter==='all'||r.status===moduleState.filter)&&JSON.stringify(r).normalize('NFKC').toLocaleLowerCase().includes(query));
+    host.innerHTML=records.length?`<div class="module-grid">${records.map(r=>`<article class="module-card panel"><span class="module-type">${esc(L(r.type.en,r.type.mr))}</span><h2>${esc(L(r.title.en,r.title.mr))}</h2><span class="module-status">${esc(moduleStatus(r.status))}</span><p>${esc(L(r.summary.en,r.summary.mr))}</p><button type="button" class="button secondary" data-module-record="${esc(r.id)}">${L('View details','तपशील पाहा')}${icon('arrow')}</button></article>`).join('')}</div>`:emptyContent(L('No records','नोंदी नाहीत'),L('Try another search or status.','दुसरा शोध किंवा स्थिती निवडा.'));
+  }
   function renderPlaceholder(module) {
-    if (!hasSession() || state.view !== 'office') { navigate('home'); return; }
-    const copy = { meetings: [L('Gram Sabha & resolutions', 'ग्रामसभा व ठराव'), L('Meeting notices, agendas, approved minutes and action tracking.', 'बैठकीच्या सूचना, अजेंडा, मंजूर इतिवृत्त आणि कृतींचा पाठपुरावा.')], works: [L('Village development', 'विकासकामे'), L('Development plans, works, progress and assets.', 'विकास आराखडे, कामांची प्रगती आणि मालमत्ता.')], finance: [L('Taxes & finance', 'कर व अर्थव्यवस्था'), L('Verified demands, authorized payments, budgets and accounts.', 'पडताळलेली मागणी, अधिकृत देयके, अंदाजपत्रक आणि लेखे.')] }[module];
-    root.innerHTML = `${breadcrumb(L('Future module', 'भावी विभाग'))}<section class="panel placeholder-panel"><span class="service-icon sand">${icon(module === 'finance' ? 'coins' : module === 'works' ? 'home' : 'users')}</span><span class="demo-inline">${L('PLACEHOLDER · NEXT PHASE', 'पुढील टप्पा · फक्त संकल्पना')}</span><h1 class="page-title">${copy[0]}</h1><p>${copy[1]}</p><p class="muted">${L('This lean demo focuses on citizen requests, office follow-up and GP information. This module is intentionally a placeholder.', 'या लहान डेमोचा भर नागरिकांचे अर्ज, कार्यालयीन पाठपुरावा आणि ग्रामपंचायत माहितीवर आहे. हा विभाग पुढील टप्प्यासाठी ठेवला आहे.')}</p><button type="button" class="button primary" data-route="home">${state.view === 'office' ? L('Return to request queue', 'अर्जांच्या यादीकडे परत जा') : L('Return to citizen services', 'नागरिक सेवांकडे परत जा')}${icon('arrow')}</button></section>`;
+    if(!hasSession()||state.view!=='office')return;
+    const names={meetings:L('Meetings & resolutions','सभा व ठराव'),works:L('Development works','विकासकामे'),finance:L('Taxes & finance','कर व अर्थव्यवस्था')};
+    root.innerHTML=`${breadcrumb(names[module])}${titleBlock(names[module],'')}<section class="module-board"><div class="news-toolbar"><label class="search-box">${icon('search')}<span class="sr-only">${L('Search records','नोंदी शोधा')}</span><input type="search" id="moduleSearch" value="${esc(moduleState.query)}" placeholder="${L('Search records…','नोंदी शोधा…')}" maxlength="100"></label><label><span class="sr-only">${L('Status','स्थिती')}</span><select id="moduleFilter"><option value="all">${L('All records','सर्व नोंदी')}</option>${['planned','active','complete'].map(s=>`<option value="${s}" ${moduleState.filter===s?'selected':''}>${moduleStatus(s)}</option>`).join('')}</select></label></div><div id="moduleResults" aria-live="polite"></div><button type="button" class="text-button" data-route="home">${L('Home','मुख्यपृष्ठ')}</button></section>`;
+    moduleResults();
+  }
+  function openModuleRecord(id) {
+    if(!hasSession()||state.view!=='office'||!futureRoutes.has(state.route))return;
+    const raw=moduleRecords().find(r=>r.id===id);if(!raw)return;const r=localizedRecord(raw);
+    openDialog(`${modalHeader(esc(r.title),esc(r.id))}<div class="modal-body"><p>${esc(r.summary)}</p><dl class="review-list">${r.fields.map(([k,v])=>`<div class="review-row"><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl></div><footer class="modal-footer"><button type="button" class="button secondary" data-module-print="${esc(id)}">${icon('file')}${L('Print / Share','छापा / शेअर करा')}</button><button type="button" class="button secondary" data-close>${t('close')}</button></footer>`);
+  }
+  const schemeById = id => window.GP_PUBLIC_SITE_DATA?.schemes.find(s => s.id === id);
+  function schemeSections(s) {
+    const d=s.details, pick=v=>L(v.en,v.mr), list=v=>'<ul>'+pick(v).map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';
+    const link=(url,label)=>url&&/^https:\/\//.test(url)?`<a class="text-button" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)}${icon('arrow')}</a>`:'';
+    return [
+      {key:'overview',title:L('About','माहिती'),text:pick(d.overview)+'\n'+pick(s.help),html:`<p>${esc(pick(d.overview))}</p><p>${esc(pick(s.help))}</p>`},
+      {key:'eligibility',title:L('Eligibility','पात्रता'),text:pick(d.eligibility).join('\n'),html:list(d.eligibility)},
+      {key:'documents',title:L('Documents','कागदपत्रे'),text:pick(d.documents).join('\n'),html:list(d.documents)},
+      {key:'steps',title:L('How to apply','अर्जप्रक्रिया'),text:pick(d.steps).join('\n'),html:list(d.steps)},
+      {key:'deadline',title:L('Closing date','अंतिम तारीख'),text:pick(d.deadline),html:`<p>${esc(pick(d.deadline))}</p>`},
+      {key:'application',title:L('Official application','अधिकृत अर्ज'),text:pick(d.application.label)+'\n'+d.application.url+(d.application.mode==='office'?'\n'+L('Submit through the designated office; a citizen online form is not verified here.','नियुक्त कार्यालयामार्फत अर्ज द्या; येथे नागरिकांचा ऑनलाइन अर्ज पडताळलेला नाही.') : ''),html:link(d.application.url,pick(d.application.label))+(d.application.mode==='office'?`<p>${L('Submit through the designated office; a citizen online form is not verified here.','नियुक्त कार्यालयामार्फत अर्ज द्या; येथे नागरिकांचा ऑनलाइन अर्ज पडताळलेला नाही.')}</p>`:'')},
+      {key:'beneficiaries',title:L('Beneficiary information','लाभार्थी माहिती'),text:pick(d.beneficiaries.description)+(d.beneficiaries.url?'\n'+d.beneficiaries.url:''),html:`<p>${esc(pick(d.beneficiaries.description))}</p>`+link(d.beneficiaries.url,L('Official public information','अधिकृत सार्वजनिक माहिती'))}
+    ];
+  }
+  function openScheme(id) {
+    const s=schemeById(id);if(!s?.details)return;
+    openDialog(`${modalHeader(esc(L(s.short.en,s.short.mr)))}<div class="modal-body scheme-detail">${schemeSections(s).map((section,i)=>`<details class="scheme-detail-section" data-scheme-section="${section.key}" ${i===0?'open':''}><summary>${section.title}</summary><div>${section.html}</div></details>`).join('')}</div><footer class="modal-footer"><button type="button" class="button secondary" data-scheme-print="${esc(id)}">${icon('file')}${L('Print / Share','छापा / शेअर करा')}</button><button type="button" class="button secondary" data-close>${t('close')}</button></footer>`);
+  }
+  function printScheme(id) {
+    const s=schemeById(id);if(!s?.details)return;
+    const record={gpCode:state.gp,id:'SCHEME-'+s.id,title:L(s.short.en,s.short.mr),summary:L(s.benefit.en,s.benefit.mr),fields:schemeSections(s).map(section=>[section.title,section.text])};
+    preparedPrint=window.GPPrinting.renderDocument({kind:'scheme-guide',lang:state.lang,gp:{code:state.gp,name:gpName(),en:gpObject(state.gp).en,mr:window.GP_PUBLIC_SITE_DATA.displayName(gpObject(state.gp),'mr')},record});showPreparedPrint();
+  }
+  const publicNotices = () => window.GP_PUBLIC_SITE_DATA?.noticesForGP(state.gp) || [];
+  function updateNotifications() {
+    const savedRead=read('newsRead:'+state.gp,[]);const readIds=Array.isArray(savedRead)?savedRead:[];const count=publicNotices().filter(n=>!readIds.includes(n.id)).length;
+    const badge=document.getElementById('notificationCount');if(!badge)return;badge.hidden=!count;badge.textContent=String(count);
+    document.getElementById('notificationBell').setAttribute('aria-label',L(`Notifications · ${count} unread`,`सूचना · ${count} न वाचलेल्या`));
+  }
+  function noticeFields(n) {
+    const date=value=>value?new Intl.DateTimeFormat(state.lang==='mr'?'mr-IN':'en-IN',{dateStyle:'medium',timeStyle:value.includes('T')?'short':undefined,timeZone:'Asia/Kolkata'}).format(new Date(value.includes('T')?value:value+'T12:00:00Z')):L('Not applicable','लागू नाही');
+    const cat=window.GP_PUBLIC_SITE_DATA.newsCategories.find(c=>c[0]===n.category);
+    return [[L('Reference','संदर्भ'),n.reference],[L('Issued by','जारी करणारे कार्यालय'),L(n.issuer.en,n.issuer.mr)],[L('Category','प्रकार'),cat?.[state.lang==='mr'?2:1]||''],[L('Published','प्रसिद्ध दिनांक'),date(n.date)],[L(n.deadlineLabel.en,n.deadlineLabel.mr),date(n.deadlineAt)],[L('Priority','प्राधान्य'),window.GP_PUBLIC_SITE_DATA.isNoticeUrgent(n)?L('Urgent / Emergency','तातडीची सूचना'):L('Normal','सामान्य')],...(n.reviewAt?[[L('Alert expiry / review','तातडीची सूचना समाप्ती / पुनरावलोकन'),date(n.reviewAt)]]:[]),[L('Attachment','जोडपत्र'),L(n.attachment.title.en,n.attachment.title.mr)]];
+  }
+  function prepareNotice(id) {
+    const n=publicNotices().find(n=>n.id===id);if(!n)return false;
+    const record={gpCode:state.gp,id:n.reference,title:L(n.title.en,n.title.mr),summary:L(n.body.en,n.body.mr),fields:noticeFields(n).slice(1)};
+    preparedPrint=window.GPPrinting.renderDocument({kind:'notice',lang:state.lang,gp:{code:state.gp,name:gpName(),en:gpObject(state.gp).en,mr:window.GP_PUBLIC_SITE_DATA.displayName(gpObject(state.gp),'mr')},record});return true;
+  }
+  function openNews(id) {
+    const n=publicNotices().find(n=>n.id===id);if(!n)return;
+    const savedRead=read('newsRead:'+state.gp,[]);const readIds=Array.isArray(savedRead)?savedRead:[];if(!readIds.includes(id))write('newsRead:'+state.gp,[...readIds,id]);updateNotifications();
+    openDialog(`${modalHeader(esc(L(n.title.en,n.title.mr)))}<div class="modal-body"><dl class="review-list">${noticeFields(n).map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl><p>${esc(L(n.body.en,n.body.mr))}</p><button type="button" class="text-button" data-notice-print="${esc(id)}">${icon('file')}${esc(L(n.attachment.title.en,n.attachment.title.mr))}${icon('arrow')}</button>${n.url?`<a href="${esc(n.url)}" target="_blank" rel="noopener noreferrer" class="button secondary">${L('View circulars','परिपत्रके पाहा')}${icon('arrow')}</a>`:''}</div><footer class="modal-footer"><button type="button" class="button secondary" data-notice-print="${esc(id)}">${icon('file')}${L('Print','छापा')}</button><button type="button" class="button secondary" data-notice-share="${esc(id)}">${icon('arrow')}${L('Share','शेअर करा')}</button>${n.route?`<button class="button primary" data-route="${esc(n.route)}">${L('View schemes','योजना पाहा')}</button>`:''}<button type="button" class="button secondary" data-close>${t('close')}</button></footer>`);
+  }
+  function openNotifications() {
+    const items=publicNotices();
+    openDialog(`${modalHeader(L('Notifications','सूचना'))}<div class="modal-body"><div class="notice-list">${items.length?items.slice(0,5).map(n=>`<button type="button" class="notice-row notification-row" data-news-id="${esc(n.id)}"><span class="notification-copy"><strong>${esc(L(n.title.en,n.title.mr))}</strong><small class="notification-preview">${esc(L(n.body.en,n.body.mr).split(/\s+/).slice(0,16).join(' '))}${L(n.body.en,n.body.mr).split(/\s+/).length>16?'…':''}</small></span><time datetime="${esc(n.date||'')}">${n.date?new Intl.DateTimeFormat(state.lang==='mr'?'mr-IN':'en-IN',{day:'numeric',month:'short',year:'numeric',timeZone:'Asia/Kolkata'}).format(new Date(n.date+'T12:00:00Z')):L('Reference','संदर्भ')}</time>${icon('arrow')}</button>`).join(''):`<p>${L('No notices posted.','सूचना प्रसिद्ध केलेल्या नाहीत.')}</p>`}</div></div><footer class="modal-footer"><button type="button" class="button primary" data-route="news">${L('All notices','सर्व सूचना')}</button><button type="button" class="button secondary" data-close>${t('close')}</button></footer>`);
+  }
+  let sharingDocument = false;
+  async function sharePreparedDocument() {
+    if(!preparedPrint||sharingDocument)return;
+    const snapshot=preparedPrint,gp=state.gp;
+    let host;
+    sharingDocument=true;
+    const controls=[...document.querySelectorAll('#sharePreparedDocument,[data-notice-share]')];
+    controls.forEach(button=>{button.disabled=true;button.setAttribute('aria-busy','true');});
+    try {
+      if(typeof window.html2canvas!=='function')throw new Error('Image exporter unavailable');
+      host=document.createElement('div');host.id='shareImageCapture';host.setAttribute('aria-hidden','true');
+      const width=snapshot.paper==='landscape'?1120:794;
+      host.style.cssText=`position:absolute;left:-12000px;top:0;width:${width}px;background:white;color:#182437;pointer-events:none;`;
+      host.innerHTML=snapshot.html;document.body.append(host);
+      host.querySelectorAll('.print-preview,.print-sheet,.print-table-wrap').forEach(element=>{element.style.setProperty('max-height','none','important');element.style.setProperty('overflow','visible','important');element.style.setProperty('max-width','none','important');});
+      host.querySelectorAll('.print-preview').forEach(element=>{element.style.setProperty('width',width+'px','important');element.style.setProperty('border','0','important');element.style.setProperty('border-radius','0','important');});
+      await document.fonts.ready;
+      const totalHeight=Math.ceil(host.getBoundingClientRect().height),pageHeight=1400,pages=Math.ceil(totalHeight/pageHeight);
+      if(!pages||pages>20)throw new Error('Use Print / Save as PDF for this long document');
+      const files=[];
+      for(let page=0;page<pages;page++) {
+        const canvas=await window.html2canvas(host,{backgroundColor:'#ffffff',scale:2,width,height:Math.min(pageHeight,totalHeight-page*pageHeight),y:page*pageHeight,windowWidth:1280,windowHeight:1000,scrollX:0,scrollY:0,logging:false,useCORS:false,allowTaint:false,ignoreElements:element=>['IFRAME','SCRIPT','VIDEO'].includes(element.tagName)});
+        // Repeat the permanent mark even when a long document spans several images.
+        const output=document.createElement('canvas');output.width=canvas.width;output.height=canvas.height+36;const context=output.getContext('2d');context.fillStyle='#ffffff';context.fillRect(0,0,output.width,output.height);context.drawImage(canvas,0,36);context.fillStyle='#fff3e9';context.fillRect(0,0,output.width,36);context.fillStyle='#853b25';context.font='bold 18px sans-serif';context.fillText(`DEMO ONLY · GP ${gp} · ${page+1}/${pages}`,20,24);
+        const blob=await new Promise((resolve,reject)=>output.toBlob(value=>value?resolve(value):reject(new Error('Image export failed')),'image/png'));
+        files.push(new File([blob],`DEMO-GP${gp}${pages>1?'-'+(page+1):''}.png`,{type:'image/png'}));
+        canvas.width=canvas.height=output.width=output.height=0;
+      }
+      if(preparedPrint!==snapshot||state.gp!==gp)return;
+      try {if(navigator.canShare?.({files})&&navigator.share){await navigator.share({files,title:snapshot.title});return;}}
+      catch(error){if(error.name==='AbortError')return;}
+      for(const file of files){const url=URL.createObjectURL(file),a=document.createElement('a');a.href=url;a.download=file.name;a.click();setTimeout(()=>URL.revokeObjectURL(url),10000);}
+      toast(L('Image downloaded for sharing.','शेअर करण्यासाठी प्रतिमा डाउनलोड केली.'));
+    } catch(error) {
+      toast(L('Could not create the image. Use Print → Save as PDF.','प्रतिमा तयार झाली नाही. छापा → PDF म्हणून जतन करा वापरा.'));
+    } finally {
+      host?.remove();sharingDocument=false;
+      controls.forEach(button=>{button.disabled=false;button.removeAttribute('aria-busy');});
+    }
   }
   const officeQueryKey = value => String(value ?? '').normalize('NFKC').toLocaleLowerCase('mr').replace(/\s+/g, ' ').trim();
   function visibleOfficeRequests() {
@@ -455,7 +566,7 @@
         <dl class="admin-profile-grid">${rows.map(([label, value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>
         <div id="workspaceAuthorityStatus" class="admin-authority-note">${icon('shield')}<div><strong>${L('Official authority: verification pending', 'अधिकृत अधिकार: पडताळणी बाकी')}</strong><p>${L('Directory identity and a demo sign-in do not verify an officer appointment or permission to issue services.', 'निर्देशिकेतील ओळख आणि डेमो प्रवेश म्हणजे अधिकाऱ्याची नियुक्ती किंवा सेवा वितरणाची परवानगी पडताळलेली नाही.')}</p></div></div>
       </section>
-      <section class="panel admin-services-panel"><div class="section-header"><h2>${L('Enabled demo services', 'डेमोमधील उपलब्ध सेवा')}</h2><span class="count-badge">${getServices().length}</span></div><div class="admin-service-list">${getServices().map(service => `<span class="admin-service-chip">${icon(service.icon)}${esc(service[state.lang])}</span>`).join('')}</div><p class="field-hint">${L('This menu is illustrative. Real service rules, fees, documents and issuing authority require verification before launch.', 'ही नमुना यादी आहे. प्रत्यक्ष वापरापूर्वी सेवा नियम, शुल्क, कागदपत्रे आणि वितरण अधिकार तपासणे आवश्यक आहे.')}</p></section>
+      <section class="panel admin-services-panel"><div class="section-header"><h2>${L('Enabled demo services', 'डेमोमधील उपलब्ध सेवा')}</h2><span class="count-badge">${getServices().length}</span></div><div class="admin-service-list">${getServices().map(service => `<span class="admin-service-chip">${cardIcon(service.icon)}${esc(service[state.lang])}</span>`).join('')}</div><p class="field-hint">${L('This menu is illustrative. Real service rules, fees, documents and issuing authority require verification before launch.', 'ही नमुना यादी आहे. प्रत्यक्ष वापरापूर्वी सेवा नियम, शुल्क, कागदपत्रे आणि वितरण अधिकार तपासणे आवश्यक आहे.')}</p></section>
       ${window.GPVillages?.render({ gpCode: state.gp, lang: state.lang }) || ''}
       <section class="panel admin-services-panel" id="sampleDataPanel"><div class="section-header"><h2>${L('Sample cases for your walkthrough', 'डेमोसाठी नमुना अर्ज')}</h2><span class="demo-inline">${L('FICTIONAL DATA', 'काल्पनिक माहिती')}</span></div><p>${L('Add a small set of certificate, property, water, village-issue and assisted-service examples for the services enabled in this GP. Existing requests and updates are kept.', 'या ग्रामपंचायतीतील उपलब्ध सेवांसाठी दाखले, मालमत्ता, पाणी, गावातील समस्या आणि मदतीने केलेल्या अर्जांचे काही नमुने जोडा. सध्याचे अर्ज आणि सूचना जतन होतील.')}</p><button type="button" id="loadDemoScenarios" class="button secondary">${icon('plus')}${L('Add sample cases', 'नमुना अर्ज जोडा')}</button></section>
       <div class="admin-workspace-actions"><button type="button" class="button primary" data-admin-route="queue">${L('Review citizen requests', 'नागरिकांचे अर्ज तपासा')}${icon('arrow')}</button><button type="button" id="returnCitizenView" class="button secondary">${L('See Citizen view', 'नागरिक विभाग पाहा')}${icon('users')}</button></div>`;
@@ -467,7 +578,7 @@
     translateShell(); document.getElementById('workspaceHeader').dataset.demoLabel = L('Demo only', 'फक्त डेमो'); document.getElementById('topDemoNotice').textContent = L('Demo only', 'फक्त डेमो'); root.hidden = authOpen; enrollmentRoot.hidden = !authOpen;
     if (authOpen) { root.replaceChildren(); delete root.dataset.home; document.querySelector('.skip-link').href = '#enrollmentRoot'; return; }
     document.querySelector('.skip-link').href = '#mainContent';
-    if (['home', 'about', 'leadership', 'contact'].includes(state.route)) {
+    if (['home', 'about', 'leadership', 'contact', 'schemes', 'news', 'development', 'places'].includes(state.route)) {
       root.innerHTML = publicController?.render(state.route, { gpCode: state.gp, lang: state.lang }) || '';
       if (state.route === 'home') root.dataset.home = 'shared'; else delete root.dataset.home;
     } else {
@@ -522,7 +633,7 @@
   }
   function publicServiceGuidance(service) {
     const local = service.category === 'local';
-    return '<span class="service-icon ' + service.tone + '">' + icon(service.icon) + '</span><p class="modal-lead">' + esc(L(...service.desc)) + '</p><h3>' + L('Before you apply', 'अर्जापूर्वी') + '</h3><ul class="detail-list"><li>' + L('Applicant name and a brief explanation of your request.', 'अर्जदाराचे नाव आणि अर्जाची थोडक्यात माहिती.') + '</li><li>' + (local ? L('Location or landmark and a clear description of the issue.', 'ठिकाण किंवा खूण आणि समस्येचा स्पष्ट तपशील.') : L('Existing entry or assessment reference, if available.', 'उपलब्ध असल्यास नोंद किंवा मालमत्ता आकारणी क्रमांक.')) + '</li><li>' + L('The office must confirm current documents, fees, authority and availability.', 'सध्याची कागदपत्रे, शुल्क, अधिकारी व उपलब्धता कार्यालयाने निश्चित करावी.') + '</li></ul>' + (service.id === 'assessment' ? '<p class="info-note">' + L('An assessment extract is a tax record, not a title deed or building permission.', 'आकारणी उतारा ही कर नोंद आहे; मालकीहक्काचा दस्त किंवा बांधकाम परवानगी नाही.') + '</p>' : '') + (service.id === 'niradhar' ? '<p class="info-note">' + L('The age-certificate format is not verified in this demo. This does not establish ineligibility or remove an entitlement.', 'या डेमोमध्ये वयाच्या दाखल्याचा नमुना पडताळलेला नाही. त्यामुळे अपात्रता किंवा हक्काचा अभाव सिद्ध होत नाही.') + '</p>' : '') + '<div class="info-note">' + icon('help') + '<p>' + L('Browse guidance without an account. Login is required only to record a sample application. No government submission, payment or official certificate is made.', 'खात्याशिवाय मार्गदर्शन पाहा. नमुना अर्ज नोंदवण्यासाठीच लॉगिन आवश्यक आहे. शासकीय अर्ज, शुल्क किंवा अधिकृत प्रमाणपत्र तयार होत नाही.') + '</p></div>';
+    return '<span class="service-icon ' + service.tone + '">' + cardIcon(service.icon) + '</span><p class="modal-lead">' + esc(L(...service.desc)) + '</p><h3>' + L('Before you apply', 'अर्जापूर्वी') + '</h3><ul class="detail-list"><li>' + L('Applicant name and a brief explanation of your request.', 'अर्जदाराचे नाव आणि अर्जाची थोडक्यात माहिती.') + '</li><li>' + (local ? L('Location or landmark and a clear description of the issue.', 'ठिकाण किंवा खूण आणि समस्येचा स्पष्ट तपशील.') : L('Existing entry or assessment reference, if available.', 'उपलब्ध असल्यास नोंद किंवा मालमत्ता आकारणी क्रमांक.')) + '</li><li>' + L('The office must confirm current documents, fees, authority and availability.', 'सध्याची कागदपत्रे, शुल्क, अधिकारी व उपलब्धता कार्यालयाने निश्चित करावी.') + '</li></ul>' + (service.id === 'assessment' ? '<p class="info-note">' + L('An assessment extract is a tax record, not a title deed or building permission.', 'आकारणी उतारा ही कर नोंद आहे; मालकीहक्काचा दस्त किंवा बांधकाम परवानगी नाही.') + '</p>' : '') + (service.id === 'niradhar' ? '<p class="info-note">' + L('The age-certificate format is not verified in this demo. This does not establish ineligibility or remove an entitlement.', 'या डेमोमध्ये वयाच्या दाखल्याचा नमुना पडताळलेला नाही. त्यामुळे अपात्रता किंवा हक्काचा अभाव सिद्ध होत नाही.') + '</p>' : '') + '<div class="info-note">' + icon('help') + '<p>' + L('Browse guidance without an account. Login is required only to record a sample application. No government submission, payment or official certificate is made.', 'खात्याशिवाय मार्गदर्शन पाहा. नमुना अर्ज नोंदवण्यासाठीच लॉगिन आवश्यक आहे. शासकीय अर्ज, शुल्क किंवा अधिकृत प्रमाणपत्र तयार होत नाही.') + '</p></div>';
   }
   function openService(id, channel = 'citizen', guidanceOnly = false) {
     const service = services.find(item => item.id === id);
@@ -543,7 +654,7 @@
     const draft = state.draft; const service = serviceById(draft.service); const local = service.category === 'local';
     const steps = [L('Service', 'सेवा'), L('Your details', 'तुमची माहिती'), L('Review', 'पुनरावलोकन')];
     let body = '';
-    if (state.draftStep === 0) body = `<span class="service-icon ${service.tone}">${icon(service.icon)}</span><p class="modal-lead">${esc(L(...service.desc))}</p><h3>${L('Before you apply', 'अर्जापूर्वी')}</h3><ul class="detail-list"><li>${L('Applicant name and a brief explanation of your request.', 'अर्जदाराचे नाव आणि अर्जाची थोडक्यात माहिती.')}</li><li>${local ? L('Location or landmark and a clear description of the issue.', 'ठिकाण किंवा खूण आणि समस्येचा स्पष्ट तपशील.') : L('Existing entry or assessment reference, if available.', 'उपलब्ध असल्यास नोंद किंवा मालमत्ता आकारणी क्रमांक.')}</li><li>${L('The office will explain any additional verification needed.', 'अधिक पडताळणी लागल्यास कार्यालय माहिती देईल.')}</li></ul>${service.id === 'assessment' ? `<p class="info-note">${L('An assessment extract is a tax record, not a title deed or building permission.', 'आकारणी उतारा ही कर नोंद आहे; मालकीहक्काचा दस्त किंवा बांधकाम परवानगी नाही.')}</p>` : ''}<div class="info-note">${icon('help')}<p>${L('Use sample information only. This prototype does not submit to government or issue certificates.', 'फक्त नमुना माहिती वापरा. या डेमोतून शासकीय अर्ज किंवा प्रमाणपत्र वितरण होत नाही.')}</p></div>`;
+    if (state.draftStep === 0) body = `<span class="service-icon ${service.tone}">${cardIcon(service.icon)}</span><p class="modal-lead">${esc(L(...service.desc))}</p><h3>${L('Before you apply', 'अर्जापूर्वी')}</h3><ul class="detail-list"><li>${L('Applicant name and a brief explanation of your request.', 'अर्जदाराचे नाव आणि अर्जाची थोडक्यात माहिती.')}</li><li>${local ? L('Location or landmark and a clear description of the issue.', 'ठिकाण किंवा खूण आणि समस्येचा स्पष्ट तपशील.') : L('Existing entry or assessment reference, if available.', 'उपलब्ध असल्यास नोंद किंवा मालमत्ता आकारणी क्रमांक.')}</li><li>${L('The office will explain any additional verification needed.', 'अधिक पडताळणी लागल्यास कार्यालय माहिती देईल.')}</li></ul>${service.id === 'assessment' ? `<p class="info-note">${L('An assessment extract is a tax record, not a title deed or building permission.', 'आकारणी उतारा ही कर नोंद आहे; मालकीहक्काचा दस्त किंवा बांधकाम परवानगी नाही.')}</p>` : ''}<div class="info-note">${icon('help')}<p>${L('Use sample information only. This prototype does not submit to government or issue certificates.', 'फक्त नमुना माहिती वापरा. या डेमोतून शासकीय अर्ज किंवा प्रमाणपत्र वितरण होत नाही.')}</p></div>`;
     if (state.draftStep === 1) body = `<form id="applicationForm"><div class="field-grid"><div class="form-field"><label for="applicantName">${L('Applicant name (sample)', 'अर्जदाराचे नाव (नमुना)')} *</label><input id="applicantName" name="applicantName" value="${esc(draft.applicant)}" minlength="2" maxlength="80" autocomplete="off" required></div><div class="form-field"><label for="applicantMobile">${L('Mobile (optional)', 'मोबाईल (ऐच्छिक)')}</label><input id="applicantMobile" name="applicantMobile" value="${esc(draft.mobile)}" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="${L('Leave blank for demo', 'डेमोसाठी रिकामे ठेवा')}" autocomplete="off"></div></div><div class="form-field"><label for="applicationLocation">${L('Location / ward / landmark', 'ठिकाण / प्रभाग / खूण')}${local ? ' *' : ''}</label><input id="applicationLocation" name="applicationLocation" value="${esc(draft.location)}" maxlength="150" ${local ? 'required' : ''}></div>${!local ? `<div class="form-field"><label for="registerReference">${L('Existing record reference (optional)', 'आधीचा नोंद क्रमांक (ऐच्छिक)')}</label><input id="registerReference" value="${esc(draft.register)}" maxlength="100" placeholder="${L('If known', 'माहित असल्यास')}"></div>` : ''}<div class="form-field"><label for="applicationDetails">${L('Tell us what you need', 'तुमची गरज थोडक्यात सांगा')} *</label><textarea id="applicationDetails" name="applicationDetails" minlength="5" maxlength="1000" required placeholder="${['residence', 'noc', 'building', 'taxreceipt', 'generalreceipt', 'marriage-registration'].includes(service.id) ? esc(L(...service.desc)) : local ? L('Describe a sample water or maintenance issue…', 'पाणी किंवा दुरुस्तीची नमुना समस्या लिहा…') : L('For example: a sample request for a registered certificate copy.', 'उदा.: नोंदणीकृत प्रमाणपत्राच्या प्रतीसाठी नमुना अर्ज. अनुक्रमांक असल्यास नमूद करा.')}">${esc(draft.details)}</textarea></div><label class="upload-box" for="applicationAttachment">${icon('upload')}<span><strong>${L('Optional sample attachment', 'ऐच्छिक नमुना कागदपत्र')}</strong><small>${esc(draft.attachment || L('Do not select personal documents. Only a filename is kept in the demo.', 'वैयक्तिक कागदपत्र निवडू नका. डेमोमध्ये फक्त फाईलचे नाव दिसेल.'))}</small></span><input id="applicationAttachment" type="file" accept=".pdf,.png,.jpg,.jpeg,.txt"></label></form>`;
     if (state.draftStep === 1 && ['residence', 'noc', 'building', 'taxreceipt', 'generalreceipt', 'marriage-registration'].includes(service.id)) body = `<p class="info-note">${esc(L(...service.desc))}</p>` + body;
     if (state.draftStep === 2) body = `<h3>${L('Review request', 'अर्ज तपासा')}</h3><dl class="review-list">${[[L('Service', 'सेवा'), service[state.lang]], [L('Panchayat', 'ग्रामपंचायत'), `${gpName()} · ${state.gp}`], [L('Applicant', 'अर्जदार'), draft.applicant], [L('Location', 'ठिकाण'), draft.location || '—'], [L('Channel', 'अर्जाचा मार्ग'), draft.channel === 'assisted' ? L('Office assisted (demo)', 'कार्यालयाच्या मदतीने (डेमो)') : t('citizen')], [L('Details', 'माहिती'), draft.details], ...(draft.attachment ? [[L('Sample filename', 'नमुना फाईल'), draft.attachment]] : [])].map(([label, value]) => `<div class="review-row"><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl><div class="info-note">${icon('shield')}<p>${L('You will get a DEMO reference. No fee is collected and no official application is submitted.', 'तुम्हाला DEMO अर्ज क्रमांक मिळेल. कोणतेही शुल्क घेतले जात नाही आणि अधिकृत अर्ज पाठवला जात नाही.')}</p></div>`;
@@ -706,7 +817,16 @@
     if (button.id === 'returnCitizenView') { switchRole('citizen'); return; }
     if (button.dataset.adminRoute) { if (hasSession() && state.view === 'office') navigate(button.dataset.adminRoute); return; }
     if (button.dataset.route) { navigate(button.dataset.route); return; }
-    if (button.dataset.placeholder) { navigate(button.dataset.placeholder); return; }
+    if (button.dataset.schemeOpen) { openScheme(button.dataset.schemeOpen); return; }
+    if (button.dataset.schemePrint) { printScheme(button.dataset.schemePrint); return; }
+    if (button.id === 'notificationBell') { openNotifications(); return; }
+    if (button.dataset.noticePrint) { if(prepareNotice(button.dataset.noticePrint))showPreparedPrint();return; }
+    if (button.dataset.noticeShare) { if(prepareNotice(button.dataset.noticeShare))sharePreparedDocument();return; }
+    if (button.dataset.newsId) { openNews(button.dataset.newsId); return; }
+    if (button.dataset.moduleRecord) { openModuleRecord(button.dataset.moduleRecord); return; }
+    if (button.dataset.modulePrint) { openPrintPreview('module-report',button.dataset.modulePrint,state.route); return; }
+    if (button.id === 'sharePreparedDocument') { sharePreparedDocument(); return; }
+    if (button.dataset.placeholder) { moduleState.query='';moduleState.filter='all';navigate(button.dataset.placeholder); return; }
     if (button.dataset.applyService) { applyForService(button.dataset.applyService, button.dataset.channel || 'citizen'); return; }
     if (button.dataset.serviceId) { openService(button.dataset.serviceId); return; }
     if (button.dataset.assisted) { openService(button.dataset.assisted, 'assisted'); return; }
@@ -731,12 +851,14 @@
   document.addEventListener('input', e => {
     if (typeof e.target.setCustomValidity === 'function') e.target.setCustomValidity('');
     if (e.target.id === 'officeSearch' && hasSession() && state.view === 'office') { state.officeQuery = e.target.value; updateOfficeResults(); }
+    if (e.target.id === 'moduleSearch' && hasSession() && state.view === 'office') { moduleState.query=e.target.value; moduleResults(); }
     if (e.target.id === 'serviceSearch') { state.query = e.target.value; updateServiceResults(); }
     if (e.target.id === 'peopleSearch') { state.peopleQuery = e.target.value; updatePeopleResults(); }
     if (e.target.id === 'applicationAttachment') { const file = e.target.files[0]; if (file && state.draft) { state.draft.attachment = file.name; e.target.closest('.upload-box').querySelector('small').textContent = file.name; } }
   });
   document.addEventListener('change', e => {
     if (e.target.id === 'panchayatSelect') switchGP(e.target.value);
+    if (e.target.id === 'moduleFilter' && hasSession() && state.view === 'office') { moduleState.filter=e.target.value;moduleResults(); }
     if (e.target.id === 'officeFilter' && hasSession() && state.view === 'office') { state.officeFilter = e.target.value; updateOfficeResults(); }
     if (e.target.id === 'statusSelect' && state.view === 'office') {
       const form = document.getElementById('statusForm');
@@ -908,6 +1030,7 @@
       onBeforeOpen() { closeRolePopover(); closeMobileNav(); publicController?.closeDialogs(); },
       onSelect(entry) {
         if (entry.kind === 'service') { navigate('services'); openService(entry.serviceId, 'citizen', true); }
+        else if (entry.kind === 'scheme') { navigate('schemes'); openScheme(entry.schemeId); }
         else if (entry.kind === 'person') { navigate('leadership'); publicController?.openPerson(entry.personId); }
         else if (entry.kind === 'village') {
           navigate('about');

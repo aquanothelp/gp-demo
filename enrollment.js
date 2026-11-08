@@ -19,7 +19,7 @@
     const defaultGP = String(registry.defaultSelection?.gpCode || '171415');
     const state = { lang: options.language === 'en' ? 'en' : 'mr', stateCode: '', districtCode: '', gpCode: '', search: '', username: '', activeUsername: '', activeGP: '', signedIn: false, busy: false, attempts: 0, lockedUntil: 0, error: '', notice: '' };
     const L = (en, mr) => state.lang === 'mr' ? mr : en;
-    const name = item => String(item?.[state.lang] || item?.en || '');
+    const name = item => String(window.GP_PUBLIC_SITE_DATA?.displayName(item, state.lang) || item?.[state.lang] || item?.en || '');
     const field = id => host.querySelector('#' + id);
     const districtState = item => String(item?.stateCode || states[0]?.code || '');
     const access = () => window.GPPortalAccess;
@@ -51,7 +51,7 @@
     }
     function matchingGPs() {
       const query = key(state.search);
-      return gps.filter(item => String(item.districtCode) === state.districtCode && (!query || key(item.en + ' ' + item.mr + ' ' + item.code).includes(query)));
+      return gps.filter(item => String(item.districtCode) === state.districtCode && (!query || key(item.en + ' ' + item.mr + ' ' + (window.GP_PUBLIC_SITE_DATA?.displayName(item, 'mr') || '') + ' ' + item.code).includes(query)));
     }
     function gpOptions() {
       const matches = matchingGPs();

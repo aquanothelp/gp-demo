@@ -264,3 +264,8 @@
 @media print { #workspaceHeader .slim-demo-notice { display: none !important; } }
 #gpShell a[href^="sources.html"], #sharedFooter .public-footer-bottom { display: none !important; }
 .person-evidence, .panchayat-villages > details, [data-public-about-site] { display: none !important; }
+
+/* Compact shared header: 16px notice plus one controls row. */
+#gpShell #workspaceHeader { min-height:76px; padding:20px 24px 4px; }
+#gpShell .public-gp-label strong { font-size:24px; }
+@media(max-width:800px) { #gpShell #workspaceHeader { min-height:72px; padding:20px 8px 4px; } #gpShell .public-gp-label strong { font-size:18px; } }

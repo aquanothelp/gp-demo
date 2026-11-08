@@ -320,9 +320,13 @@
   }
   function renderDocument(options = {}) {
     const ctx = context(options);
-    const allowedKinds = ['certificate', 'format', 'acknowledgement', 'application', 'history', 'register', 'citizen-list', 'gp-profile', 'assessment-register'];
+    const allowedKinds = ['certificate', 'format', 'acknowledgement', 'application', 'history', 'register', 'citizen-list', 'gp-profile', 'assessment-register', 'module-report', 'scheme-guide', 'notice'];
     if (!allowedKinds.includes(ctx.kind)) { delete ctx.request; return gapDocument(ctx, 'Choose a supported demo paper-trail document.', 'समर्थित डेमो कागदी नोंदीचा प्रकार निवडा.'); }
     if (!ctx.code) { delete ctx.request; return gapDocument(ctx, 'A selected GP identity is required. No request data is included.', 'निवडलेल्या ग्रामपंचायतीची ओळख आवश्यक आहे. अर्जाची माहिती समाविष्ट नाही.'); }
+    if(['module-report','scheme-guide','notice'].includes(ctx.kind)){
+      const r=ctx.record;if(!r||String(r.gpCode)!==ctx.code)return gapDocument(ctx,'Record unavailable for this GP.','या ग्रामपंचायतीसाठी नोंद उपलब्ध नाही.');
+      return documentShell(ctx, r.title+' — DEMO', fields([[text('Reference','संदर्भ',ctx.lang),r.id],...(Array.isArray(r.fields)?r.fields:[])])+paragraph(r.summary), 'portrait', null);
+    }
     const single = ['certificate', 'acknowledgement', 'application', 'history'].includes(ctx.kind);
     if ((single && !ctx.request) || (ctx.request && String(ctx.request.gp || '') !== ctx.code)) {
       // Never echo the mismatched request, even in the metadata/header of an error.

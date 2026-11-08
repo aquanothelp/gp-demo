@@ -18,9 +18,13 @@
       const pages = [
         page('home', 'Home', 'मुख्यपृष्ठ', ctx.gpName + ' ' + ctx.gpCode),
         page('about', 'Our villages', 'आपली गावे', 'about village panchayat Beed Maharashtra माहिती गाव बीड महाराष्ट्र ' + ctx.gpName),
+        page('places','Places','महत्त्वाची ठिकाणे','schools colleges temples police hospital fire brigade ambulance ration shop शाळा महाविद्यालये मंदिरे पोलीस रुग्णालय अग्निशमन रुग्णवाहिका रेशन'),
+        page('development','Development','विकासकामे','village projects progress pipeline streetlights development गाव प्रगती पथदिवे पाणीवाहिनी'),
+        page('news', 'News', 'सूचना', 'announcements notices water shutdown gram sabha employment events orders circulars बातम्या सूचना पाणीपुरवठा ग्रामसभा रोजगार कार्यक्रम आदेश परिपत्रके'),
+        page('schemes', 'Schemes', 'योजना', 'MNREGA MGNREGA NREGA VB G RAM G PMAY UMED Jal Jeevan Swachh Bharat housing employment livelihoods toilets मनरेगा रोजगार हमी घरकुल आवास उमेद बचत गट शौचालय जल जीवन स्वच्छ भारत'),
         page('services', 'All citizen services', 'सर्व नागरिक सेवा', 'certificate documents दाखले कागदपत्रे'),
         page('leadership', 'Leadership & team', 'पदाधिकारी व कर्मचारी', 'people representatives sarpanch secretary ग्रामसेवक सरपंच सचिव सदस्य'),
-        page('contact', 'Contact & visit', 'संपर्क व भेट', 'office address phone hours PIN कार्यालय पत्ता दूरध्वनी वेळा'),
+        page('contact', 'Contact & visit', 'संपर्क', 'office address phone hours PIN कार्यालय पत्ता दूरध्वनी वेळा'),
         page('help', 'Help & guidance', 'मदत व मार्गदर्शन', 'application documents assistance अर्ज कागदपत्रे मदत'),
         page('preferences', 'Website language & preferences', 'संकेतस्थळाची भाषा व पसंती', 'settings English Marathi भाषा इंग्रजी मराठी'),
         page('choose-gp', 'Choose another Panchayat', 'दुसरी ग्रामपंचायत निवडा', 'GP village directory Beed ग्रामपंचायत निर्देशिका'),
@@ -32,9 +36,9 @@
         page('queue', 'Request queue', 'अर्जांची यादी', 'admin applications review प्रशासक पडताळणी', 'admin'),
         page('workspace', 'Office details', 'कार्यालयाची माहिती', 'admin services configuration प्रशासक कार्यालय', 'admin'),
         page('permissions', 'Users & permissions', 'वापरकर्ते व परवानग्या', 'admin roles प्रशासक भूमिका', 'admin'),
-        page('meetings', 'Gram Sabha & resolutions', 'ग्रामसभा व ठराव', 'meeting preview placeholder बैठक', 'admin-preview'),
-        page('works', 'Village development', 'विकासकामे', 'works plans preview placeholder योजना', 'admin-preview'),
-        page('finance', 'Taxes & finance', 'कर व अर्थव्यवस्था', 'accounts preview placeholder लेखे', 'admin-preview')
+        page('meetings', 'Gram Sabha & resolutions', 'ग्रामसभा व ठराव', 'meetings agenda minutes resolutions बैठक इतिवृत्त ठराव', 'admin-preview'),
+        page('works', 'Village development', 'विकासकामे', 'works progress assets planning विकासकामे प्रगती', 'admin-preview'),
+        page('finance', 'Taxes & finance', 'कर व अर्थव्यवस्था', 'accounts tax collection budgets कर वसुली अंदाजपत्रक लेखे', 'admin-preview')
       );
       else pages.push(page('requests', 'My requests', 'माझे अर्ज', 'applications history माझे अर्ज इतिहास', 'citizen'));
       if (ctx.signedIn) pages.push(page('profile', 'My profile & language', 'माझे खाते व भाषा', 'account settings language खाते भाषा', 'account'));
@@ -45,7 +49,8 @@
       }));
       const villages = (options.getVillages?.() || []).map(village => ({ key: 'village:' + village.code, kind: 'village', villageCode: village.code,
         title: { en: village.en, mr: village.mr }, description: { en: 'Village code ' + village.code, mr: 'गाव क्रमांक ' + village.code }, terms: 'village गाव ' + village.code, access: 'public' }));
-      return [...pages, ...services, ...villages, ...people];
+      const schemes=(window.GP_PUBLIC_SITE_DATA?.schemes||[]).map(s=>({key:'scheme:'+s.id,kind:'scheme',schemeId:s.id,title:s.short,description:s.benefit,terms:[s.title.en,s.title.mr,s.id].join(' '),access:'public'}));
+      return [...pages, ...schemes, ...services, ...villages, ...people];
     }
     function matches(query) {
       const ctx = context(), terms = normalized(query).split(' ').filter(Boolean);
@@ -57,7 +62,7 @@
     function results() {
       const query = field('siteSearchInput').value, ctx = context(), found = matches(query);
       const shown = query.trim() ? found.slice(0, 12) : found.slice(0, 6);
-      const categories = { page: L('Page', 'पृष्ठ'), service: L('Service', 'सेवा'), person: L('People', 'व्यक्ती'), village: L('Village', 'गाव') };
+      const categories = { scheme: L('Scheme','योजना'), page: L('Page', 'पृष्ठ'), service: L('Service', 'सेवा'), person: L('People', 'व्यक्ती'), village: L('Village', 'गाव') };
       field('siteSearchClear').hidden = !query;
       field('siteSearchCount').textContent = query.trim() ? L(`${found.length} results in this Panchayat website`, `या ग्रामपंचायतीच्या संकेतस्थळावर ${found.length} निकाल`) : L('Quick links · or search services, villages and people', 'थेट दुवे · किंवा सेवा, गावे व व्यक्ती शोधा');
       field('siteSearchResults').innerHTML = shown.map(entry => {

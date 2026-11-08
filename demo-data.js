@@ -232,3 +232,423 @@ window.GP_DEMO_CASES = [
     ]
   }
 ];
+
+/* Fictional administrative records; never copied into another GP. */
+window.GP_DEMO_MODULES = {
+  "meetings": [
+    {
+      "id": "MT01",
+      "gpCode": "171415",
+      "fictional": true,
+      "title": {
+        "en": "November Gram Sabha",
+        "mr": "नोव्हेंबर ग्रामसभा"
+      },
+      "type": {
+        "en": "Meeting notice",
+        "mr": "सभा सूचना"
+      },
+      "status": "planned",
+      "summary": {
+        "en": "Agenda preparation and resident suggestions.",
+        "mr": "अजेंडा तयारी आणि नागरिकांच्या सूचना."
+      },
+      "fields": [
+        {
+          "label": {
+            "en": "Date & venue",
+            "mr": "दिनांक व ठिकाण"
+          },
+          "value": {
+            "en": "15 Nov 2026 · 11 am · GP office",
+            "mr": "१५ नोव्हेंबर २०२६ · सकाळी ११ · ग्रामपंचायत कार्यालय"
+          }
+        },
+        {
+          "label": {
+            "en": "Agenda",
+            "mr": "विषय"
+          },
+          "value": {
+            "en": "Water, sanitation, housing lists and works",
+            "mr": "पाणी, स्वच्छता, घरकुल याद्या आणि विकासकामे"
+          }
+        },
+        {
+          "label": {
+            "en": "Next action",
+            "mr": "पुढील कृती"
+          },
+          "value": {
+            "en": "Circulate notice and collect suggestions",
+            "mr": "सूचना प्रसिद्ध करणे आणि विषयसूचना घेणे"
+          }
+        }
+      ]
+    },
+    {
+      "id": "MT02",
+      "gpCode": "171415",
+      "fictional": true,
+      "title": {
+        "en": "October meeting minutes",
+        "mr": "ऑक्टोबर सभेचे इतिवृत्त"
+      },
+      "type": {
+        "en": "Minutes",
+        "mr": "इतिवृत्त"
+      },
+      "status": "complete",
+      "summary": {
+        "en": "Recorded discussion and action points.",
+        "mr": "चर्चा आणि कृतींची नोंद."
+      },
+      "fields": [
+        {
+          "label": {
+            "en": "Meeting date",
+            "mr": "सभेचा दिनांक"
+          },
+          "value": {
+            "en": "20 Oct 2026",
+            "mr": "२० ऑक्टोबर २०२६"
+          }
+        },
+        {
+          "label": {
+            "en": "Discussion",
+            "mr": "चर्चा"
+          },
+          "value": {
+            "en": "Water repairs and streetlight maintenance",
+            "mr": "पाणी दुरुस्ती आणि पथदिवे देखभाल"
+          }
+        },
+        {
+          "label": {
+            "en": "Record",
+            "mr": "नोंद"
+          },
+          "value": {
+            "en": "Attendance and minutes kept in the meeting file",
+            "mr": "हजेरी आणि इतिवृत्त सभेच्या फाईलमध्ये"
+          }
+        }
+      ]
+    },
+    {
+      "id": "RS01",
+      "gpCode": "171415",
+      "fictional": true,
+      "title": {
+        "en": "Water-repair resolution",
+        "mr": "पाणी दुरुस्ती ठराव"
+      },
+      "type": {
+        "en": "Resolution",
+        "mr": "ठराव"
+      },
+      "status": "active",
+      "summary": {
+        "en": "Follow-up on the drinking-water pipeline repair proposal.",
+        "mr": "पिण्याच्या पाण्याच्या वाहिनी दुरुस्ती प्रस्तावाचा पाठपुरावा."
+      },
+      "fields": [
+        {
+          "label": {
+            "en": "Resolution reference",
+            "mr": "ठराव संदर्भ"
+          },
+          "value": {
+            "en": "DEMO-RS-01",
+            "mr": "DEMO-RS-01"
+          }
+        },
+        {
+          "label": {
+            "en": "Next action",
+            "mr": "पुढील कृती"
+          },
+          "value": {
+            "en": "Obtain an estimate and place it before the office",
+            "mr": "अंदाजपत्रक मिळवून कार्यालयासमोर सादर करणे"
+          }
+        }
+      ]
+    }
+  ],
+  "works": [
+    {
+      "id": "WK01",
+      "gpCode": "171415",
+      "fictional": true,
+      "title": {
+        "en": "Pipeline repairs",
+        "mr": "पाणीवाहिनी दुरुस्ती"
+      },
+      "type": {
+        "en": "Water supply",
+        "mr": "पाणीपुरवठा"
+      },
+      "status": "active",
+      "summary": {
+        "en": "Pipeline repair and pressure testing.",
+        "mr": "पाणीवाहिनी दुरुस्ती आणि दाब चाचणी."
+      },
+      "fields": [
+        {
+          "label": {
+            "en": "Progress",
+            "mr": "प्रगती"
+          },
+          "value": {
+            "en": "45%",
+            "mr": "४५%"
+          }
+        },
+        {
+          "label": {
+            "en": "Stage",
+            "mr": "टप्पा"
+          },
+          "value": {
+            "en": "Repair in progress; testing next",
+            "mr": "दुरुस्ती सुरू; त्यानंतर चाचणी"
+          }
+        },
+        {
+          "label": {
+            "en": "Target",
+            "mr": "उद्दिष्ट"
+          },
+          "value": {
+            "en": "18 Nov 2026",
+            "mr": "१८ नोव्हेंबर २०२६"
+          }
+        }
+      ]
+    },
+    {
+      "id": "WK02",
+      "gpCode": "171415",
+      "fictional": true,
+      "title": {
+        "en": "Streetlight repairs",
+        "mr": "पथदिवे दुरुस्ती"
+      },
+      "type": {
+        "en": "Public lighting",
+        "mr": "सार्वजनिक प्रकाश"
+      },
+      "status": "complete",
+      "summary": {
+        "en": "Faulty lamps replaced and checked.",
+        "mr": "बिघडलेले दिवे बदलून तपासले."
+      },
+      "fields": [
+        {
+          "label": {
+            "en": "Progress",
+            "mr": "प्रगती"
+          },
+          "value": {
+            "en": "100%",
+            "mr": "१००%"
+          }
+        },
+        {
+          "label": {
+            "en": "Completion record",
+            "mr": "पूर्णत्व नोंद"
+          },
+          "value": {
+            "en": "Inspection note attached to works file",
+            "mr": "पाहणी नोंद कामाच्या फाईलला जोडली"
+          }
+        }
+      ]
+    },
+    {
+      "id": "WK03",
+      "gpCode": "171415",
+      "fictional": true,
+      "title": {
+        "en": "Drain cleaning",
+        "mr": "नाली स्वच्छता"
+      },
+      "type": {
+        "en": "Sanitation",
+        "mr": "स्वच्छता"
+      },
+      "status": "planned",
+      "summary": {
+        "en": "Prepare a cleaning schedule and work estimate.",
+        "mr": "स्वच्छतेचे वेळापत्रक व अंदाजपत्रक तयार करणे."
+      },
+      "fields": [
+        {
+          "label": {
+            "en": "Progress",
+            "mr": "प्रगती"
+          },
+          "value": {
+            "en": "0%",
+            "mr": "०%"
+          }
+        },
+        {
+          "label": {
+            "en": "Next action",
+            "mr": "पुढील कृती"
+          },
+          "value": {
+            "en": "Confirm locations and estimate",
+            "mr": "ठिकाणे व अंदाजपत्रक निश्चित करणे"
+          }
+        }
+      ]
+    }
+  ],
+  "finance": [
+    {
+      "id": "TX01",
+      "gpCode": "171415",
+      "fictional": true,
+      "title": {
+        "en": "Property-tax demand",
+        "mr": "मालमत्ता कर मागणी"
+      },
+      "type": {
+        "en": "Tax demand",
+        "mr": "कर मागणी"
+      },
+      "status": "active",
+      "summary": {
+        "en": "Demand, collections and outstanding amount for a fictional property.",
+        "mr": "काल्पनिक मिळकतीची मागणी, वसुली आणि बाकी."
+      },
+      "fields": [
+        {
+          "label": {
+            "en": "Property",
+            "mr": "मिळकत"
+          },
+          "value": {
+            "en": "SAMPLE-H-08",
+            "mr": "SAMPLE-H-08"
+          }
+        },
+        {
+          "label": {
+            "en": "Financial year",
+            "mr": "आर्थिक वर्ष"
+          },
+          "value": {
+            "en": "2026–27",
+            "mr": "२०२६–२७"
+          }
+        },
+        {
+          "label": {
+            "en": "Demand / collected / balance",
+            "mr": "मागणी / वसुली / बाकी"
+          },
+          "value": {
+            "en": "₹4,500 / ₹3,000 / ₹1,500",
+            "mr": "₹४,५०० / ₹३,००० / ₹१,५००"
+          }
+        }
+      ]
+    },
+    {
+      "id": "RC01",
+      "gpCode": "171415",
+      "fictional": true,
+      "title": {
+        "en": "Collection record",
+        "mr": "वसुली नोंद"
+      },
+      "type": {
+        "en": "Receipt register",
+        "mr": "पावती नोंदवही"
+      },
+      "status": "complete",
+      "summary": {
+        "en": "A fictional collection entry linked to the sample demand.",
+        "mr": "नमुना मागणीशी जोडलेली काल्पनिक वसुली नोंद."
+      },
+      "fields": [
+        {
+          "label": {
+            "en": "Reference",
+            "mr": "संदर्भ"
+          },
+          "value": {
+            "en": "DEMO-COL-01",
+            "mr": "DEMO-COL-01"
+          }
+        },
+        {
+          "label": {
+            "en": "Amount",
+            "mr": "रक्कम"
+          },
+          "value": {
+            "en": "₹3,000",
+            "mr": "₹३,०००"
+          }
+        },
+        {
+          "label": {
+            "en": "Record type",
+            "mr": "नोंदीचा प्रकार"
+          },
+          "value": {
+            "en": "Collection ledger summary; not a prescribed Form 10 receipt",
+            "mr": "वसुली नोंद सारांश; निर्धारित नमुना १० पावती नाही"
+          }
+        }
+      ]
+    },
+    {
+      "id": "BG01",
+      "gpCode": "171415",
+      "fictional": true,
+      "title": {
+        "en": "Maintenance budget",
+        "mr": "देखभाल अंदाजपत्रक"
+      },
+      "type": {
+        "en": "Budget",
+        "mr": "अंदाजपत्रक"
+      },
+      "status": "planned",
+      "summary": {
+        "en": "Illustrative provision for local maintenance.",
+        "mr": "स्थानिक देखभालीसाठी उदाहरणार्थ तरतूद."
+      },
+      "fields": [
+        {
+          "label": {
+            "en": "Proposed provision",
+            "mr": "प्रस्तावित तरतूद"
+          },
+          "value": {
+            "en": "₹25,000",
+            "mr": "₹२५,०००"
+          }
+        },
+        {
+          "label": {
+            "en": "Purpose",
+            "mr": "प्रयोजन"
+          },
+          "value": {
+            "en": "Water and public-light maintenance",
+            "mr": "पाणी व सार्वजनिक दिव्यांची देखभाल"
+          }
+        }
+      ]
+    }
+  ]
+};
