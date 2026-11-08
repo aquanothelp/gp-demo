@@ -73,9 +73,9 @@
       }
     },
     illustrativeFocusAreas: [
-      { id: 'water', title: { en: 'Water and local maintenance', mr: 'पाणी आणि स्थानिक देखभाल' }, description: { en: 'Illustrative focus: water-supply concerns and maintenance follow-up.', mr: 'उदाहरणार्थ लक्षक्षेत्र: पाणीपुरवठ्याच्या समस्या आणि देखभालीचा पाठपुरावा.' }, verification: 'illustrative', sourceId: 'PUBLIC-SITE-EDITORIAL' },
-      { id: 'citizen-services', title: { en: 'Accessible citizen services', mr: 'सुलभ नागरिक सेवा' }, description: { en: 'Illustrative focus: clear guidance, assisted requests and status updates.', mr: 'उदाहरणार्थ लक्षक्षेत्र: स्पष्ट मार्गदर्शन, मदतीने अर्ज आणि स्थितीची माहिती.' }, verification: 'illustrative', sourceId: 'PUBLIC-SITE-EDITORIAL' },
-      { id: 'cleanliness', title: { en: 'Cleanliness and shared spaces', mr: 'स्वच्छता आणि सार्वजनिक जागा' }, description: { en: 'Illustrative focus: reporting local cleanliness and shared-space concerns.', mr: 'उदाहरणार्थ लक्षक्षेत्र: स्वच्छता आणि सार्वजनिक जागांवरील समस्या नोंदवणे.' }, verification: 'illustrative', sourceId: 'PUBLIC-SITE-EDITORIAL' }
+      { id: 'water', title: { en: 'Water & repairs', mr: 'पाणी आणि स्थानिक देखभाल' }, description: { en: 'Illustrative focus: water-supply concerns and maintenance follow-up.', mr: 'उदाहरणार्थ लक्षक्षेत्र: पाणीपुरवठ्याच्या समस्या आणि देखभालीचा पाठपुरावा.' }, verification: 'illustrative', sourceId: 'PUBLIC-SITE-EDITORIAL' },
+      { id: 'citizen-services', title: { en: 'Citizen services', mr: 'नागरिक सेवा' }, description: { en: 'Illustrative focus: clear guidance, assisted requests and status updates.', mr: 'उदाहरणार्थ लक्षक्षेत्र: स्पष्ट मार्गदर्शन, मदतीने अर्ज आणि स्थितीची माहिती.' }, verification: 'illustrative', sourceId: 'PUBLIC-SITE-EDITORIAL' },
+      { id: 'cleanliness', title: { en: 'Cleanliness', mr: 'स्वच्छता आणि सार्वजनिक जागा' }, description: { en: 'Illustrative focus: reporting local cleanliness and shared-space concerns.', mr: 'उदाहरणार्थ लक्षक्षेत्र: स्वच्छता आणि सार्वजनिक जागांवरील समस्या नोंदवणे.' }, verification: 'illustrative', sourceId: 'PUBLIC-SITE-EDITORIAL' }
     ],
     leadershipIds: ['chaklamba-priyanka-khedkar', 'chaklamba-ismail-pathan'],
     relatedOfficeIds: ['georai-bdo-listed-2025', 'georai-assistant-bdo-listed-2025'],

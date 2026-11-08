@@ -6,7 +6,7 @@
   // These public demonstration phrases are synthetic fixtures, never real credentials.
   const samplePhrase = code => `Village ${code} demonstration access only`;
   const IT_PHRASE = 'Portal operations demonstration only';
-  const SERVICE_IDS = Object.freeze(['birth', 'assessment', 'marriage', 'nodues', 'water', 'grievance', 'death', 'bpl', 'niradhar']);
+  const SERVICE_IDS = Object.freeze(['birth', 'assessment', 'marriage', 'nodues', 'water', 'grievance', 'death', 'bpl', 'niradhar', 'residence', 'noc', 'building', 'taxreceipt', 'generalreceipt', 'marriage-registration']);
   const registry = new Map((window.GP_DEMO_REGISTRY?.gps || []).map(gp => [String(gp.code), gp]));
   const preferences = new Map();
   const verifiers = new Map();

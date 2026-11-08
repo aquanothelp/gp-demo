@@ -26,10 +26,10 @@
         page('choose-gp', 'Choose another Panchayat', 'दुसरी ग्रामपंचायत निवडा', 'GP village directory Beed ग्रामपंचायत निर्देशिका'),
         page('about-site', 'Website information & sources', 'संकेतस्थळाची माहिती व स्रोत', 'source directory Meri Panchayat माहिती स्रोत'),
       ];
-      if (!ctx.signedIn || ctx.role !== 'office') pages.push(page('track', 'Track a request', 'अर्जाची स्थिती पाहा', 'status progress tracking स्थिती पाठपुरावा', 'login'));
+      if (!ctx.signedIn || ctx.role !== 'office') pages.push(page('track', 'Track a request', 'अर्जाची स्थिती', 'status progress tracking स्थिती पाठपुरावा', 'login'));
       if (!ctx.signedIn) pages.push(page('login', 'Login', 'लॉगिन', 'sign in account प्रवेश खाते'));
       else if (ctx.role === 'office') pages.push(
-        page('queue', 'Service request queue', 'सेवा अर्जांची यादी', 'admin applications review प्रशासक पडताळणी', 'admin'),
+        page('queue', 'Request queue', 'अर्जांची यादी', 'admin applications review प्रशासक पडताळणी', 'admin'),
         page('workspace', 'Office details', 'कार्यालयाची माहिती', 'admin services configuration प्रशासक कार्यालय', 'admin'),
         page('permissions', 'Users & permissions', 'वापरकर्ते व परवानग्या', 'admin roles प्रशासक भूमिका', 'admin'),
         page('meetings', 'Gram Sabha & resolutions', 'ग्रामसभा व ठराव', 'meeting preview placeholder बैठक', 'admin-preview'),
@@ -78,13 +78,13 @@
       const ctx = context(), next = [ctx.gpCode, ctx.lang, ctx.role, ctx.signedIn].join('|');
       if (signature && signature !== next) { close(false); dialog.replaceChildren(); }
       signature = next;
-      trigger.setAttribute('aria-label', L('Search this website', 'या संकेतस्थळावर शोधा'));
+      trigger.setAttribute('aria-label', L('Search', 'शोध'));
       trigger.title = trigger.getAttribute('aria-label');
     }
     function open() {
       update(); options.onBeforeOpen?.();
       const ctx = context(); returnFocus = true; dialog.lang = ctx.lang;
-      dialog.innerHTML = `<header class="site-search-heading"><div><h2 id="siteSearchTitle">${L('Search this website', 'या संकेतस्थळावर शोधा')}</h2><p>${esc(ctx.gpName)} · GP ${esc(ctx.gpCode)}</p></div><button type="button" class="icon-button" id="siteSearchClose" aria-label="${L('Close search', 'शोध बंद करा')}">${icon('close')}</button></header><div class="site-search-field">${icon('search')}<label class="sr-only" for="siteSearchInput">${L('Search pages, services and people', 'पृष्ठे, सेवा आणि व्यक्ती शोधा')}</label><input id="siteSearchInput" type="search" maxlength="120" autocomplete="off" placeholder="${L('Search pages, services or people…', 'पृष्ठे, सेवा किंवा व्यक्ती शोधा…')}" aria-describedby="siteSearchCount" aria-controls="siteSearchResults"><button type="button" class="icon-button" id="siteSearchClear" aria-label="${L('Clear search', 'शोध रिकामा करा')}" hidden>${icon('close')}</button></div><p id="siteSearchCount" class="site-search-count" role="status" aria-live="polite" aria-atomic="true"></p><ul id="siteSearchResults" class="site-search-results"></ul><div id="siteSearchEmpty" class="site-search-empty" hidden><strong>${L('No matches found', 'जुळणारा निकाल नाही')}</strong><p>${L('Try a page, service or person’s name.', 'पृष्ठ, सेवा किंवा व्यक्तीचे नाव शोधा.')}</p></div><footer class="site-search-footer">${L('Esc to close', 'बंद करण्यासाठी Esc')}</footer>`;
+      dialog.innerHTML = `<header class="site-search-heading"><div><h2 id="siteSearchTitle">${L('Search', 'शोध')}</h2><p>${esc(ctx.gpName)} · GP ${esc(ctx.gpCode)}</p></div><button type="button" class="icon-button" id="siteSearchClose" aria-label="${L('Close search', 'शोध बंद करा')}">${icon('close')}</button></header><div class="site-search-field">${icon('search')}<label class="sr-only" for="siteSearchInput">${L('Search pages, services and people', 'पृष्ठे, सेवा आणि व्यक्ती शोधा')}</label><input id="siteSearchInput" type="search" maxlength="120" autocomplete="off" placeholder="${L('Search pages, services or people…', 'पृष्ठे, सेवा किंवा व्यक्ती शोधा…')}" aria-describedby="siteSearchCount" aria-controls="siteSearchResults"><button type="button" class="icon-button" id="siteSearchClear" aria-label="${L('Clear search', 'शोध रिकामा करा')}" hidden>${icon('close')}</button></div><p id="siteSearchCount" class="site-search-count" role="status" aria-live="polite" aria-atomic="true"></p><ul id="siteSearchResults" class="site-search-results"></ul><div id="siteSearchEmpty" class="site-search-empty" hidden><strong>${L('No matches found', 'जुळणारा निकाल नाही')}</strong><p>${L('Try a page, service or person’s name.', 'पृष्ठ, सेवा किंवा व्यक्तीचे नाव शोधा.')}</p></div><footer class="site-search-footer">${L('Esc to close', 'बंद करण्यासाठी Esc')}</footer>`;
       results(); dialog.showModal(); trigger.setAttribute('aria-expanded', 'true'); field('siteSearchInput').focus();
     }
     trigger.addEventListener('click', open);

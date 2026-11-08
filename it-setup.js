@@ -7,7 +7,7 @@
   const districts = registry.districts || [];
   const gps = new Map((registry.gps || []).map(item => [String(item.code), item]));
   const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
-  const labels = { birth: 'Birth certificate copy', death: 'Death certificate copy', marriage: 'Marriage certificate copy', assessment: 'Property assessment extract', nodues: 'No-dues certificate', water: 'Water service', grievance: 'Village issues', bpl: 'BPL request', niradhar: 'Niradhar age request' };
+  const labels = { birth: 'Birth certificate copy', death: 'Death certificate copy', marriage: 'Marriage certificate copy', assessment: 'Property assessment extract', nodues: 'No-dues certificate', water: 'Water service', grievance: 'Village issues', bpl: 'BPL request', niradhar: 'Niradhar age request', residence: 'Residence certificate', noc: 'No-objection certificate', building: 'Building permission', taxreceipt: 'Form 10 · Tax receipt', generalreceipt: 'General receipt', 'marriage-registration': 'Marriage registration' };
   let session = null;
   let stage = 'setup';
   let draft = { district: '470', gpCode: '', search: '', officeName: '', services: [...access.serviceIds] };

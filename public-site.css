@@ -326,3 +326,14 @@
 @media (prefers-reduced-motion: reduce) {
   .public-site *, .public-site *::before, .public-site *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Compact card headings: icon and title share a row in both home groups. */
+.public-service-link { display: grid; grid-template-columns: 44px minmax(0, 1fr); grid-template-rows: auto auto auto; align-items: center; gap: 8px 10px; }
+.public-service-link > .service-icon { grid-column: 1; grid-row: 1; width: 44px; height: 44px; margin: 0; }
+.public-service-link > strong { grid-column: 2; grid-row: 1; line-height: 1.4; }
+.public-service-link > span:not(.service-icon) { grid-column: 1 / -1; }
+.public-service-link > .public-service-action { align-self: end; margin-top: 2px; }
+.public-focus-card { display: grid; grid-template-columns: 32px minmax(0, 1fr); align-content: start; align-items: center; gap: 8px 10px; }
+.public-focus-card > span { grid-column: 1; grid-row: 1; display: inline-flex; }
+.public-focus-card > h3 { grid-column: 2; grid-row: 1; margin: 0; line-height: 1.4; }
+.public-focus-card > p { grid-column: 1 / -1; margin: 0; }

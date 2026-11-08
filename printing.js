@@ -7,6 +7,7 @@
   const SOURCE_2015 = '2015-07-14 GR; appended notification 2015-07-10';
   const SOURCE_URL_2015 = 'https://aaplesarkar.mahaonline.gov.in/pdf/RTS_Rural_Development_Department_Notification.pdf';
   const formats = {
+    residence: { formatId: 'SERVICE-05', sourceId: 'FMS01', form: '2015 residence format', pages: [13], sourceVersion: SOURCE_2015, sourceUrl: SOURCE_URL_2015, paper: 'portrait', en: 'Residence certificate', mr: 'रहिवासी दाखला', warning: 'Historical 2015 residence layout; current-use approval and authority are unverified. This is not Revenue domicile certification. No residence inquiry was performed.', warningMr: 'ऐतिहासिक २०१५ रहिवासी नमुना; सध्याची मंजुरी व प्राधिकरण अपडताळलेले. हा महसूल अधिवास दाखला नाही. रहिवास चौकशी केलेली नाही.' },
     birth: { formatId: 'SERVICE-01', sourceId: 'FMS01', form: 'Form 5', pages: [9], sourceVersion: SOURCE_2015, sourceUrl: SOURCE_URL_2015, paper: 'portrait', en: 'Birth certificate', mr: 'जन्म प्रमाणपत्र', warning: 'Historical 2015 Form 5. No birth register was consulted; current form and Registrar appointment are unverified.', warningMr: 'ऐतिहासिक २०१५ नमुना ५. जन्म नोंदवही तपासलेली नाही; सध्याचा नमुना व निबंधकाची नियुक्ती अपडताळलेली आहे.' },
     death: { formatId: 'CIVIL-06', sourceId: 'FMS03', form: 'Form 6', pages: [20], sourceVersion: 'Rules 2000, effective 2002-05-01; older compilation includes 2021 amendment; issue date unknown', sourceUrl: 'https://bombayhighcourt.gov.in/bhc/libweb/legislation/rules/R2000.001.pdf', paper: 'portrait', en: 'Death certificate', mr: 'मृत्यू प्रमाणपत्र', warning: 'Older Rules compilation Form 6; current form and authority are unverified. Cause of death is excluded. The defective 2015 service-pack death page is not used.', warningMr: 'जुन्या नियम संकलनातील नमुना ६; सध्याचा नमुना व प्राधिकरण अपडताळलेले आहे. मृत्यूचे कारण समाविष्ट नाही. दोषयुक्त २०१५ मृत्यू पृष्ठ वापरलेले नाही.' },
     marriage: { formatId: 'SERVICE-03', sourceId: 'FMS01', form: 'Form E', pages: [11], sourceVersion: SOURCE_2015, sourceUrl: SOURCE_URL_2015, paper: 'portrait', en: 'Certificate of registration of marriage', mr: 'विवाह नोंदणीचे प्रमाणपत्र', warning: '2015 rendering of Form E, section 6(1)/rule 5, with photograph/identifier spaces. This is not a checked register entry or solemnisation.', warningMr: 'कलम ६(१)/नियम ५ मधील नमुना ईचे २०१५ रूप, फोटो/ओळख क्रमांकाच्या जागांसह. ही पडताळलेली विवाह नोंद किंवा विवाह संपन्न केल्याचा पुरावा नाही.' },
@@ -19,6 +20,7 @@
   Object.freeze(formats);
 
   const serviceNames = {
+    residence: ['Residence certificate', 'रहिवासी दाखला'], noc: ['No-objection certificate', 'ना हरकत दाखला'], building: ['Building permission', 'बांधकाम परवाना'], taxreceipt: ['Form 10 · Tax receipt', 'नमुना १० · कर पावती'], generalreceipt: ['General receipt', 'सामान्य पावती'], 'marriage-registration': ['Marriage registration', 'विवाह नोंदणी'],
     birth: ['Birth certificate copy', 'जन्म प्रमाणपत्राची प्रत'], assessment: ['Property assessment extract', 'मालमत्ता आकारणी उतारा'],
     marriage: ['Marriage certificate copy', 'विवाह प्रमाणपत्राची प्रत'], nodues: ['No-dues certificate', 'थकबाकी नसल्याचा दाखला'],
     water: ['Water service request', 'पाणीपुरवठा सेवा'], grievance: ['Village issue', 'गावातील समस्या'],
@@ -244,6 +246,20 @@
       [text('Registered on', 'नोंदणी दिनांक', lang), d.value('2020-02-04 (fictional)', '२०२०-०२-०४ (काल्पनिक)')], [text('Place', 'ठिकाण', lang), ctx.gpName], [text('Date — DEMO only', 'दिनांक — फक्त डेमो', lang), dateLabel(SAMPLE_DATE, lang)]
     ]) + sourceSignature(ctx, text('Registrar of Marriage / Gramsevak / Village Development Officer — as printed in 2015; appointment unverified', 'विवाह निबंधक / ग्रामसेवक / ग्रामविकास अधिकारी — २०१५ स्रोतानुसार; नियुक्ती अपडताळलेली', lang));
   }
+  function renderResidence(ctx) {
+    const { lang } = ctx, d = formData(ctx);
+    return fields([
+      [text('GP office', 'ग्रामपंचायत कार्यालय', lang), ctx.gpName],
+      [text('Taluka', 'तालुका', lang), ctx.taluka], [text('District', 'जिल्हा', lang), ctx.district],
+      [text('Demo dispatch reference', 'डेमो जावक संदर्भ', lang), d.reference],
+      [text('Demo date', 'डेमो दिनांक', lang), dateLabel(SAMPLE_DATE, lang)],
+      [text('Applicant', 'अर्जदार', lang), d.applicant], [text('Residence / village', 'रहिवास / गाव', lang), d.residence],
+      [text('Permanent / temporary — not verified', 'कायम / तात्पुरता — अपडताळलेले', lang), ''],
+      [text('Residence inquiry reference — not checked', 'रहिवास चौकशी संदर्भ — तपासलेला नाही', lang), ''],
+      [text('Identity field — not collected', 'ओळख क्रमांक — घेतलेला नाही', lang), ''],
+      [text('Place', 'ठिकाण', lang), ctx.gpName]
+    ]) + paragraph(text('Historical residence-statement field structure only; no residence or eligibility is certified by this demo.', 'फक्त ऐतिहासिक रहिवासी दाखल्याच्या जागांची रचना; डेमोतून रहिवास किंवा पात्रता प्रमाणित होत नाही.', lang)) + sourceSignature(ctx, text('Historical signatory space — unsigned', 'ऐतिहासिक स्वाक्षरीची जागा — स्वाक्षरी नाही', lang));
+  }
   function renderLocalCertificate(ctx, bpl) {
     const { lang } = ctx;
     const d = formData(ctx);
@@ -324,7 +340,7 @@
       const info = getFormatInfo(id);
       if (!info.available) return gapDocument(ctx, info.reason, info.reasonMr);
       const title = `${ctx.lang === 'mr' ? info.mr : info.en} — ${text('DEMO preview', 'डेमो पूर्वदृश्य', ctx.lang)}`;
-      const body = id === 'birth' || id === 'death' ? renderCivil(ctx, id === 'death') : id === 'marriage' ? renderMarriage(ctx) : id === 'assessment' ? renderAssessmentExtract(ctx) : renderLocalCertificate(ctx, id === 'bpl');
+      const body = id === 'birth' || id === 'death' ? renderCivil(ctx, id === 'death') : id === 'marriage' ? renderMarriage(ctx) : id === 'assessment' ? renderAssessmentExtract(ctx) : id === 'residence' ? renderResidence(ctx) : renderLocalCertificate(ctx, id === 'bpl');
       return documentShell(ctx, title, body, info.paper, info);
     }
     if (ctx.kind === 'register' || ctx.kind === 'citizen-list') {

@@ -73,7 +73,7 @@
 /* The persistent view control replaces the removed floating demo tools. */
 #workspaceHeader { min-height: 76px; padding-block: 10px; }
 #workspaceHeader .topbar-actions { flex: 0 0 auto; flex-direction: row; align-items: center; gap: 8px; }
-#workspaceHeader .workspace-role-badge { min-height: 44px; cursor: pointer; }
+#workspaceHeader .workspace-role-badge { min-height: 44px; padding: 6px 8px; gap: 4px; cursor: pointer; }
 .workspace-role-badge .role-badge-chevron { width: 12px; height: 12px; flex-basis: 12px; transform: rotate(90deg); }
 .workspace-role-badge[aria-expanded="true"] .role-badge-chevron { transform: rotate(-90deg); }
 .role-view-popover { position: fixed; inset: auto; width: 280px; max-width: calc(100vw - 24px); max-height: calc(100dvh - 24px); margin: 0; padding: 16px; overflow: auto; border: 1px solid var(--line); border-radius: 12px; background: #fff; color: var(--ink); box-shadow: 0 12px 36px rgb(24 24 27 / 16%); }
@@ -116,6 +116,7 @@
 }
 
 /* One persistent GP site shell for public information, Login and signed-in tools. */
+.role-label-mobile { display: none; }
 #gpShell { padding-top: 0; }
 #gpShell #sidebar { height: max(0px, calc(var(--public-viewport-height, 100dvh) - var(--public-header-height))); }
 #gpShell #mobileShade { height: max(0px, calc(var(--public-viewport-height, 100dvh) - var(--public-header-height))); bottom: auto; }
@@ -145,22 +146,28 @@
 }
 
 @media (max-width: 800px) {
-  #gpShell #workspaceHeader { display: grid; grid-template-columns: 44px 40px minmax(0, 1fr) auto; gap: 6px 9px; min-height: 72px; padding: 8px 12px; }
-  #gpShell .gp-shell-brand, #gpShell .gp-shell-brand img { width: 40px; height: 40px; }
+  #gpShell #workspaceHeader { display: grid; grid-template-columns: 44px 44px minmax(0, 1fr) auto; grid-template-rows: 44px; align-items: center; gap: 4px; min-height: 64px; padding: 8px; }
+  #gpShell .gp-shell-brand { width: 44px; height: 44px; }
+  #gpShell .gp-shell-brand img { width: 32px; height: 32px; }
   #gpShell .public-gp-label { grid-column: 3; margin: 0; }
-  #gpShell .public-gp-label strong { font-size: 22px; line-height: 1.25; }
+  #gpShell .public-gp-label strong { font-size: 18px; line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   #gpShell .public-gp-label small { font-size: 11px; }
-  #gpShell .public-national-marks { grid-column: 4; grid-row: 1; gap: 8px; }
+  #gpShell #workspaceHeader .public-toplinks, #gpShell #workspaceHeader .public-national-marks { display: none; }
   #gpShell .public-national-marks .india-emblem { width: 23px; height: 36px; }
-  #gpShell #workspaceHeader .gp-account-actions { grid-column: 1 / -1; grid-row: 2; justify-content: flex-end; gap: 8px; width: 100%; min-height: 44px; padding-top: 2px; border-top: 1px solid var(--line); }
+  #gpShell #workspaceHeader .gp-account-actions { grid-column: 4; grid-row: 1; justify-content: flex-end; gap: 2px; width: auto; min-height: 44px; padding: 0; border: 0; }
   #gpShell #workspaceHeader .profile-button { width: 44px; height: 44px; }
-  #gpShell #workspaceHeader .workspace-role-badge { max-width: none; min-height: 44px; padding: 7px 10px; font-size: 13px; }
+  #gpShell #workspaceHeader .workspace-role-badge { max-width: none; min-height: 44px; padding: 6px; font-size: 12px; white-space: nowrap; }
+  #gpShell .workspace-role-badge > .icon, #gpShell .role-label-desktop { display: none; }
+  #gpShell .role-label-mobile { display: inline; }
+  #gpShell .public-gp-label small { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #gpShell .public-gp-label small > .icon { display: none; }
+  #gpShell #shellLogin { min-width: 54px; padding-inline: 8px; }
   #gpShell .gp-auth-content { padding: 18px 16px 28px; }
   #gpShell input, #gpShell select, #gpShell textarea, #publicDialogs input, #publicDialogs select, #publicDialogs textarea { font-size: 16px; }
 }
 @media (max-width: 420px) {
-  #gpShell #workspaceHeader { gap: 6px; padding-inline: 10px; }
-  #gpShell .public-gp-label strong { font-size: 20px; }
+  #gpShell #workspaceHeader { gap: 4px; padding-inline: 8px; }
+  #gpShell .public-gp-label strong { font-size: 18px; }
 }
 
 /* Ordinary users choose a GP and sign in; portal IT provisions GPs separately. */
@@ -246,3 +253,14 @@
   .queue-toolbar { grid-template-columns: minmax(0, 1fr); }
   .queue-heading { grid-column: 1; }
 }
+
+/* Single slim notice replaces repeated screen-only demo/source annotations. */
+#gpShell #workspaceHeader { padding-top: 26px; min-height: 92px; }
+#gpShell #workspaceHeader .slim-demo-notice { position: absolute; inset: 0 0 auto; height: 16px; display: block; background: #fff3e9; color: #8b3d16; border-bottom: 1px solid #f4e1d2; font-size: 10px; font-weight: 500; line-height: 15px; text-align: center; letter-spacing: .15px; }
+.demo-inline, .gp-login-demo-note, #rolePreviewNote, .people-source-note, .public-source-note, .directory-context, .person-source-records, .person-source-detail, .person-source-caveat, .person-source-badge, .public-person-badge, .public-contact-source, .public-contact-source-link, .admin-authority-note, .admin-sidebar-note, .people-office-location small, .sample-reference { display: none !important; }
+@media (max-width: 800px) {
+  #gpShell #workspaceHeader { padding-top: 24px; min-height: 80px; }
+}
+@media print { #workspaceHeader .slim-demo-notice { display: none !important; } }
+#gpShell a[href^="sources.html"], #sharedFooter .public-footer-bottom { display: none !important; }
+.person-evidence, .panchayat-villages > details, [data-public-about-site] { display: none !important; }
